@@ -1,0 +1,101 @@
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-primary);
+
+    .svg-icon {
+        stroke: none;
+        fill: currentColor;
+        height: 100%;
+        width: auto;
+    }
+
+    svg {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    // Sizes
+    &.icon-sm {
+        width: 1rem;
+        height: 1rem;
+        min-width: 1rem;
+        min-height: 1rem;
+    }
+    &.icon-md {
+        width: 1.5rem;
+        height: 1.5rem;
+        min-width: 1.5rem;
+        min-height: 1.5rem;
+    }
+    &.icon-lg {
+        width: 2rem;
+        height: 2rem;
+        min-width: 2rem;
+        min-height: 2rem;
+    }
+    &.icon-xl {
+        width: 4rem;
+        height: 4rem;
+        min-width: 4rem;
+        min-height: 4rem;
+    }
+
+    // Specific Colors - Might need to be tweeked when dark theme is added
+    &.sass:hover {
+        color: #cb6699;
+    }
+    &.storybook:hover {
+        color: #ff4785;
+    }
+    &.html:hover {
+        color: #e44d26;
+    }
+    &.css:hover {
+        color: #1572b6;
+        // @include color-60(#1572b6);
+    }
+    &.tailwind:hover {
+        color: rgba(#38b2ac, 0.6);
+    }
+    &.nuxt:hover {
+        color: #00c58e;
+    }
+    &.jquery:hover {
+        color: #0868ac;
+    }
+    &.jira:hover {
+        color: #2684ff;
+    }
+    &.javascript:hover {
+        color: #f0db4f;
+    }
+    &.typescript:hover {
+        color: #007acc;
+    }
+    &.jest:hover {
+        color: #99425b;
+    }
+    &.git:hover {
+        color: #f34f29;
+    }
+    &.bootstrap:hover {
+        color: #7952b3;
+    }
+    &.figma:hover {
+        color: #9d57f6;
+    }
+    &.vscode:hover {
+        color: #68217a;
+    }
+    &.vuetify:hover {
+        color: #1697f6;
+    }
+    &.vue:hover {
+        color: #314559;
+    }
+    &.wordpress:hover {
+        color: #21759a;
+    }
+}

@@ -1,0 +1,251 @@
+import {
+    Canvas,
+    Meta,
+    Story,
+    ArgsTable,
+    Description,
+} from '@storybook/addon-docs';
+
+export const items = [
+    {
+        header: 'A very long card header',
+        tag: 'web development',
+        description:
+            'Chupa chups cotton candy sweet danish sesame snaps sweet roll caramels donut danish. Chocolate bar carrot cake liquorice gummies gummi bears gummies shortbread tiramisu cotton candy.',
+        link: {
+            url: 'google.com',
+            name: 'Google',
+        },
+    },
+    {
+        header: 'This is a header',
+        isImageExternal: true,
+        image: 'https://images.unsplash.com/photo-1650991768876-2a9a554f268c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60',
+        source: 'Unsplash',
+        link: {
+            url: 'caitlinhawley.com',
+            name: 'Caitlin Hawley',
+        }, // isActionable
+        description:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    },
+    {
+        header: 'Another header 3',
+        tag: 'web development',
+        isImageExternal: true,
+        image: 'https://images.unsplash.com/photo-1651024954841-dbd597a403bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60',
+        source: 'iStock',
+        description:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    },
+    {
+        header: 'Another header 3',
+        tag: 'web development',
+        isImageExternal: true,
+        image: 'https://images.unsplash.com/photo-1651444335753-7ef8a5df4efd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+        source: 'iStock',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+];
+
+import Card from './card.vue';
+import CardGroup from '../card-group/card-group.vue';
+
+<!-- Refer to their wonderful documentation: https://material.io/components/cards#anatomy -->
+<!-- https://mui.com/material-ui/react-card/ -->
+<!-- Add a divider feature and/or an expand feature? -->
+
+<!--<Meta title="Components/Card" component={Card} subcomponents={{ CardGroup }} />-->
+
+<!-- <Meta
+    title="Components/Card"
+    component={(Card, CardGroup)} /> -->
+
+<Meta
+    title="Components/Card"
+    decorators={[
+        () => ({
+            template: '<div style="height: 350px;"><story /></div>',
+        }),
+    ]}
+    component={Card}
+    argTypes={{
+        orientation: {
+            description: 'Orientation of a group of cards',
+            options: ['portrait', 'landscape', 'square'],
+            table: {
+                category: 'Card Group',
+                type: { summary: 'string' },
+                defaultValue: { summary: 'portrait' },
+            },
+            control: {
+                type: 'select',
+            },
+        },
+        isRounded: {
+            description: 'Defines if the card should have round edges.',
+            table: {
+                category: 'Card Group',
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' },
+            },
+            control: {
+                type: 'boolean',
+            },
+        },
+        showBorder: {
+            description: 'Defines if a border should display in the card',
+            table: {
+                category: 'Card',
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' },
+            },
+            control: {
+                type: 'boolean',
+            },
+        },
+    }}
+/>
+
+export const Template = (args, { argTypes }) => {
+    return {
+        props: Object.keys(argTypes),
+        components: { Card },
+        template: `<div>
+            <Card v-bind="$props">
+                <template #header>
+                    <h3 class="text-lg">Header (Simple)</h3>
+                </template>
+            </Card>
+        </div>`,
+    };
+};
+export const NamedSlots = (args, { argTypes }) => {
+    return {
+        props: Object.keys(argTypes),
+        components: { Card },
+        template: `<div
+                class="card-group grid grid-cols-3 pb-8 gap-4 grid-cols-card-square"
+            >
+                <Card v-bind="$props">
+                    <template #header>
+                        <h3 class="text-lg">Header (Simple)</h3>
+                    </template>
+                    <template #content>
+                        <p>
+                            Tart chupa chups liquorice jelly beans gummi bears
+                            bonbon sweet roll halvah bonbon. Dragée cookie
+                            shortbread chupa chups pie dessert apple pie
+                            fruitcake. Sesame snaps jelly croissant jelly-o
+                            apple pie marzipan sesame snaps. Dragée macaroon
+                            cake dessert icing. Cookie sugar plum chocolate cake
+                            liquorice shortbread donut. Sesame snaps cupcake
+                            muffin shortbread fruitcake apple pie pie chocolate
+                            bar bonbon. Pudding carrot cake donut donut muffin
+                            cotton candy ice cream apple pie pastry. Gingerbread
+                            sweet roll donut sweet topping jelly. Wafer lollipop
+                            marshmallow gingerbread tart cake carrot cake apple
+                            pie. Jujubes icing shortbread cotton candy apple pie
+                            carrot cake. Bonbon macaroon chocolate cookie sugar
+                            plum sweet macaroon lollipop danish. Gummies
+                            tiramisu soufflé bear claw pudding cheesecake.
+                            Topping donut sesame snaps pie cotton candy jujubes
+                            cheesecake chupa chups. Cotton candy tart topping
+                            toffee tart gummi bears cupcake tart sesame snaps.
+                        </p>
+                    </template>
+                    <template #footer>
+                        <Button
+                            variant="secondary"
+                            size="sm"
+                            outlined
+                            is-full-width
+                            class="mb-2"
+                        >
+                            CTA
+                        </Button>
+                    </template>
+                </Card>
+                <Card v-bind="$props">
+                    <template #header>
+                        <h3 class="text-lg">Header (Simple)</h3>
+                    </template>
+                    <template #content>
+                        <p>
+                            Tart chupa chups liquorice jelly beans gummi bears
+                            bonbon sweet roll halvah bonbon. Dragée cookie
+                            shortbread chupa chups pie dessert apple pie
+                            fruitcake. Sesame snaps jelly croissant jelly-o
+                            apple pie marzipan sesame snaps. Dragée macaroon
+                            cake dessert icing. Cookie sugar plum chocolate cake
+                            liquorice shortbread donut. Sesame snaps cupcake
+                            muffin shortbread fruitcake apple pie pie chocolate
+                            bar bonbon. Pudding carrot cake donut donut muffin
+                            cotton candy ice cream apple pie pastry. Gingerbread
+                            sweet roll donut sweet topping jelly. Wafer lollipop
+                            marshmallow gingerbread tart cake carrot cake apple
+                            pie. Jujubes icing shortbread cotton candy apple pie
+                            carrot cake. Bonbon macaroon chocolate cookie sugar
+                            plum sweet macaroon lollipop danish. Gummies
+                            tiramisu soufflé bear claw pudding cheesecake.
+                            Topping donut sesame snaps pie cotton candy jujubes
+                            cheesecake chupa chups. Cotton candy tart topping
+                            toffee tart gummi bears cupcake tart sesame snaps.
+                        </p>
+                    </template>
+                </Card>
+                <Card v-bind="$props">
+                    <template #image>
+                        <img
+                            src="https://images.unsplash.com/photo-1650991768876-2a9a554f268c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+                            alt="add image alt to object"
+                        />
+                    </template>
+                    <template #header>
+                        <h3 class="text-lg">Header (Simple)</h3>
+                    </template>
+                    <template #content>
+                        <p>
+                            Tart chupa chups liquorice jelly beans gummi bears
+                            bonbon sweet roll halvah bonbon. Dragée cookie
+                            shortbread chupa chups pie dessert apple pie
+                            fruitcake. Sesame snaps jelly croissant jelly-o
+                            apple pie marzipan sesame snaps. Dragée macaroon
+                            cake dessert icing. Cookie sugar plum chocolate cake
+                            liquorice shortbread donut. Sesame snaps cupcake
+                            muffin shortbread fruitcake apple pie pie chocolate
+                            bar bonbon. Pudding carrot cake donut donut muffin
+                            cotton candy ice cream apple pie pastry. Gingerbread
+                            sweet roll donut sweet topping jelly. Wafer lollipop
+                            marshmallow gingerbread tart cake carrot cake apple
+                            pie. Jujubes icing shortbread cotton candy apple pie
+                            carrot cake. Bonbon macaroon chocolate cookie sugar
+                            plum sweet macaroon lollipop danish. Gummies
+                            tiramisu soufflé bear claw pudding cheesecake.
+                            Topping donut sesame snaps pie cotton candy jujubes
+                            cheesecake chupa chups. Cotton candy tart topping
+                            toffee tart gummi bears cupcake tart sesame snaps.
+                        </p>
+                    </template>
+                </Card>
+            </div>`,
+    };
+};
+
+# Card
+
+<Canvas>
+    <Story
+        name="Overview"
+        args={{
+            orientation: 'landscape',
+            showBorder: false,
+            isRounded: false,
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+<ArgsTable story="Overview" />

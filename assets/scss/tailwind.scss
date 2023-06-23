@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables';
+
+/* https://coolors.co/palette/f6bd60-f7ede2-f5cac3-84a59d-f28482 */
+/* https://coolors.co/palette/e9e9e1-90a9b0-cb9b9c-dfded8-3e3e3e */
+/* Including scss variables in scss variables: https://sass-lang.com/documentation/breaking-changes/css-vars */
+
+/* neutral-primary - milk white: https://colors.artyclick.com/color-names-dictionary/colors/FEFCFF */
+
+$cream-light: rgba($color-cream-30, 0.6);
+
+:root {
+    --bg-primary: #{$color-cream-00};
+    --bg-secondary: #eee9e3; // #eae5dd;
+    --header-primary: #{$color-teal-30};
+    --header-secondary: #{$color-blush-50};
+    --text-primary: #{$color-cream-70};
+    --text-secondary: #121629;
+    --btn-primary: #{$color-blush-50};
+    --btn-secondary: #77948d;
+    --btn-text-primary: #ffffff;
+    --link-primary: #{$color-cream-60};
+    --link-secondary: #232946;
+    --neutral-primary: #fefcff;
+    --neutral-secondary: #ebeaeb;
+    --card-bg-primary: #ffffff;
+    --card-bg-secondary: #{$color-cream-10};
+    --card-border-primary: #{$color-green-10};
+    --card-border-secondary: #{$color-blush-10};
+    --bg-overlay: rgba(253, 251, 249, 0.7);
+    --text-navigation: #{$color-cream-70};
+    // --text-navigation: rgb(148, 142, 136);
+}
+
+.dark-mode {
+    --bg-primary: #{$color-gray-60};
+    --bg-secondary: #56534f; // #{$color-cream-70}
+    --header-primary: #{$color-green-10};
+    --header-secondary: #{$color-blush-40};
+    --text-primary: #{$color-cream-10};
+    --text-secondary: #b8c1ec;
+    --btn-primary: #f8dad5;
+    --btn-secondary: #b9ceac;
+    --btn-text-primary: #{$color-gray-50};
+    --link-primary: #fffffe;
+    --link-secondary: #fffffe;
+    --neutral-primary: #545455;
+    --neutral-secondary: #1c1c1c;
+    --card-bg-primary: #{$color-cream-80};
+    --card-bg-secondary: #{$color-cream-10};
+    --card-border-primary: #{$color-green-10};
+    --card-border-secondary: #{$color-blush-10};
+    --bg-overlay: rgba(52, 50, 48, 0.7);
+    --text-navigation: #{$color-cream-10};
+}

@@ -1,0 +1,120 @@
+<!-- button.stories.mdx -->
+
+import {
+    Canvas,
+    Meta,
+    Story,
+    ArgsTable,
+    Description,
+} from '@storybook/addon-docs';
+
+export const colors = ['primary', 'secondary', 'link'];
+export const sizes = ['sm', 'md', 'lg', 'xl'];
+export const icons = ['', 'moon', 'sun', 'close', 'menu', 'computer'];
+
+import Button from './button.vue';
+
+<Meta
+    title="Components/Buttons"
+    component={Button}
+    argTypes={{
+        type: {
+            table: { disable: true },
+        },
+        variant: {
+            description: 'Color of the button',
+            options: colors,
+            table: {
+                type: { summary: 'text' },
+                defaultValue: { summary: 'primary' },
+            },
+            control: { type: 'select' },
+        },
+        size: {
+            description: 'Size of the button',
+            options: sizes,
+            table: {
+                type: { summary: 'text' },
+                defaultValue: { summary: 'md' },
+            },
+            control: { type: 'select' },
+        },
+        outlined: {
+            description: 'Outline button style',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: false },
+            },
+            control: { type: 'boolean' },
+        },
+        disabled: {
+            description: 'If the button is disabled',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: false },
+            },
+            control: { type: 'boolean' },
+        },
+        icon: {
+            description: 'If button has an icon',
+            options: icons,
+            control: {
+                type: 'select',
+            },
+            table: {
+                // category: 'Slots',
+                type: {
+                    summary: 'text',
+                    defaultValue: { summary: '' },
+                },
+            },
+        },
+        text: {
+            description: 'Text inside button',
+            control: {
+                type: 'text',
+            },
+            table: {
+                category: 'slots',
+                type: { summary: 'text' },
+                defaultValue: { summary: '' },
+            },
+        },
+        default: {
+            table: { disable: true },
+        },
+    }}
+></Meta>
+
+export const Template = (args, { argTypes }) => {
+    return {
+        props: Object.keys(argTypes),
+        components: { Button },
+        template: `
+            <Button v-bind="$props">
+                {{ text }}
+            </Button>
+        `,
+    };
+};
+
+# Button
+
+<Canvas>
+    <Story
+        name="Overview"
+        args={{
+            variant: 'primary',
+            text: 'Button text',
+            size: 'md',
+            isRounded: true,
+            isFullWidth: false,
+            outlined: false,
+            disabled: false,
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+<ArgsTable story="Overview" />

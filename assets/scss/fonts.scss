@@ -1,0 +1,88 @@
+$font_path: '/assets/fonts/';
+
+// Poppins
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Extra Light'), local('Poppins-Extra-Light'),
+        url($font_path + 'poppins-extralight.woff2') format('woff2'),
+        url($font_path + 'poppins-extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Light'), local('Poppins-Light'),
+        url($font_path + 'poppins-light.woff2') format('woff2'),
+        url($font_path + 'poppins-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+        url($font_path + 'poppins-regular.ttf') format('truetype'),
+        url($font_path + 'poppins-regular.woff2') format('woff2'),
+        url($font_path + 'poppins-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+        url($font_path + 'poppins-bold.woff2') format('woff2'),
+        url($font_path + 'poppins-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Lato
+@font-face {
+    font-family: 'Lato';
+    src: url($font_path + 'lato-bold.woff2') format('woff2'),
+        url($font_path + 'lato-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url($font_path + 'lato-light.woff2') format('woff2'),
+        url($font_path + 'lato-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url($font_path + 'lato-regular.woff2') format('woff2'),
+        url($font_path + 'lato-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Display fonts - Use for Headers?
+@font-face {
+    font-family: 'Milkshake';
+    src: url($font_path + 'milkshake.woff2') format('woff2'),
+        url($font_path + 'milkshake.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}

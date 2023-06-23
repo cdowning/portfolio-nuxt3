@@ -1,0 +1,82 @@
+// https://nuxtjs.org/tutorials/going-dark-with-nuxtjs-color-mode/
+// https://stackoverflow.com/questions/63743786/using-scss-variables-with-nuxt-color-mode
+
+// Color Shades:
+// https://mdigi.tools/color-shades/#033f63
+// https://maketintsandshades.com/#b5b682
+// https://noeldelgado.github.io/shadowlord/#033f63
+// https://www.shadegenerator.com/B5B682
+
+// How to handle color mode: https://mohitchandani.medium.com/dark-theme-with-nuxt-js-e74e78491d0c
+// Halfway down: https://mayashavin.com/articles/dark-theme-tailwind-nuxt
+
+$color-yellow-00: #ededec;
+$color-yellow-10: #fbe5bf;
+$color-yellow-20: #f9d190;
+$color-yellow-30: #f6bd60;
+$color-yellow-40: #c5974d;
+$color-yellow-50: #94713a;
+
+$color-blush-00: #fdf4f3;
+$color-blush-10: #fbeae7;
+$color-blush-20: #f8dad5;
+$color-blush-30: #f5cac3;
+$color-blush-40: #ddb6b0;
+$color-blush-50: #c4a29c;
+$color-blush-60: #ac8d89;
+$color-blush-70: #937975;
+$color-blush-80: #7b6562;
+
+$color-teal-00: #dae4e2;
+$color-teal-10: #c2d2ce;
+$color-teal-20: #a9c0ba;
+$color-teal-30: #84a59d;
+$color-teal-40: #6a847e;
+$color-teal-50: #5c736e;
+
+$color-gray-00: #ededec;
+$color-gray-10: #dbdada;
+$color-gray-20: #b7b5b4;
+$color-gray-30: #807e7c;
+$color-gray-40: #6e6c69;
+$color-gray-50: #4a4744;
+$color-gray-60: #343230;
+$color-gray-70: #252422;
+$color-gray-80: #0f0e0e;
+
+$color-cream-00: #fdfbf9;
+$color-cream-10: #fbf6f1;
+$color-cream-20: #f7ede2;
+$color-cream-30: #ded5cb;
+$color-cream-40: #c6beb5;
+$color-cream-50: #ada69e;
+$color-cream-60: #948e88;
+$color-cream-70: #635f5a;
+$color-cream-80: #45433f;
+$color-cream-90: #31302d;
+
+$color-rose-00: #fce6e6;
+$color-rose-10: #f9c2c1;
+$color-rose-20: #f6a9a8;
+$color-rose-30: #f28482;
+$color-rose-40: #c26a68;
+$color-rose-50: #914f4e;
+
+$color-green-00: #dce7d6;
+$color-green-10: #b9ceac;
+$color-green-20: #8aae75;
+$color-green-30: #6e8b5e;
+$color-green-40: #37462f;
+$color-green-50: #536846;
+
+$color-blue-00: #f3fcfd;
+$color-blue-10: #e1f7fa;
+$color-blue-20: #c3eef5;
+$color-blue-30: #b0d6dd;
+$color-blue-40: #9cbec4;
+
+$color-purple-00: #e4dadd;
+$color-purple-10: #c9b5ba;
+$color-purple-20: #a5848c;
+$color-purple-30: #846a70;
+$color-purple-40: #634f54;

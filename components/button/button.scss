@@ -1,0 +1,72 @@
+/*========================================================================
+Button Styles
+- Button/Variant Colors
+- Button Sizes
+- Button Shape (Pill, Rounded)
+- Disabled State
+- Buttons with text/icons
+========================================================================*/
+
+.btn {
+    line-height: 1.4;
+    min-width: 7rem;
+    @apply pt-2 pb-1.5;
+
+    &:not(.btn-link) {
+        border: 0.0625rem solid transparent;
+    }
+
+    &.btn-sm {
+        height: 2.5rem;
+        @apply px-4;
+    }
+    &.btn-md {
+        height: 3rem;
+        @apply px-6;
+    }
+    &.btn-lg {
+        height: 3.5rem;
+        @apply px-9;
+    }
+    &.btn-xl {
+        height: 4rem;
+        @apply px-12 py-4;
+    }
+
+    // Set icon color to text color of button
+    .icon {
+        color: currentColor;
+    }
+
+    // Color Variants
+    &.btn-primary {
+        background-color: var(--btn-primary);
+        color: var(--btn-text-primary);
+    }
+    &.btn-secondary {
+        background-color: var(--btn-secondary);
+        color: var(--btn-text-primary);
+    }
+
+    // Outline Styles
+    &.btn-outlined:not(.btn-link) {
+        border-width: 1px;
+        border-style: solid;
+        background-color: transparent;
+
+        &.btn-primary {
+            border-color: var(--btn-primary);
+            color: var(--text-primary);
+        }
+
+        &.btn-secondary {
+            border-color: var(--btn-secondary);
+            color: var(--btn-secondary);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
