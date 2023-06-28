@@ -5,13 +5,10 @@ export default defineComponent({
     setup() {
         // We only need value from the color mode object
         const { value: $colorMode } = ref(useColorMode());
-        // console.log('colorMode', $colorMode);
-        // console.log('useColorMode()', useColorMode());
 
         // const {
         //     $colorMode: { value },
         // } = useNuxtApp();
-        // console.log('test', value);
 
         const mobileMenu = ref<boolean>(false);
         const icon = ref<string>('menu');
@@ -59,7 +56,7 @@ export default defineComponent({
             return icon;
         });
         const logoSrc = computed<string>(() => {
-            return `caitlin-hawley-${$colorMode.value}.svg`;
+            return `caitlin-hawley-${$colorMode.value}`;
         });
         const mobileIcon = computed<string>(() => {
             return icon.value === 'menu' ? 'menu' : 'close';

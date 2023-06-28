@@ -6,7 +6,7 @@
         <!-- First Section -->
         <section class="cover flex flex-col">
             <header class="flex items-center container mx-auto py-6 w-5/6">
-                <!-- <Logo class="grow" :src="logoSrc" /> -->
+                <Logo class="grow" :src="logoSrc" />
                 <!-- Mobile menu icon -->
                 <Icon
                     icon="menu"
@@ -180,6 +180,31 @@
                 </div>
             </div>
         </section>
+        <div class="angle angle-slant-down"></div>
+        <section id="experience" class="about bg-primary">
+            <div class="container mx-auto py-8 w-5/6">
+                <h4 class="text-base">Contact</h4>
+                <h3 class="text-lg">Let's chat</h3>
+                <p>
+                    If you would like to get in touch with me, feel free to
+                    shoot me an email or text.
+                </p>
+                <!-- <Button>
+                    Resume
+                    <Icon icon="pdf" class="pl-1" />
+                </Button> -->
+            </div>
+        </section>
+        <footer class="bg-cream-50 text-cream-10">
+            <div
+                class="flex justify-evenly md:justify-start container mx-auto py-8 w-5/6"
+            >
+                <Icon icon="github" size="lg" color="cream-10" />
+                <Icon icon="linkedin-circle" size="lg" color="cream-10" />
+                <Icon icon="codepen" size="lg" color="cream-10" />
+                <Icon icon="twitter" size="lg" color="cream-10" />
+            </div>
+        </footer>
     </div>
 </template>
 

@@ -105,6 +105,7 @@ export default defineComponent({
         const data = ref(props.item);
         const useData = !!data.value;
 
+        // https://stackblitz.com/edit/github-pq8nym-aoavsh?file=app.vue
         const codePenImages = import.meta.glob(
             '~/assets/images/codepen/*.png',
             {
