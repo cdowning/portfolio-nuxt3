@@ -18,24 +18,24 @@
                 <Navigation
                     class="flex-grow w-full pr-3 md:flex justify-center items-center hidden"
                 >
-                    <a class="mx-3">
+                    <a class="mx-3" @click="scrollTo('about')">
                         <Icon class="mx-2" icon="female" />
                         About
                     </a>
-                    <a class="mx-3">
+                    <a class="mx-3" @click="scrollTo('experience')">
                         <Icon class="mx-2" icon="briefcase" />
                         Experience
                     </a>
-                    <a class="mx-3">
+                    <a class="mx-3" @click="scrollTo('contact')">
                         <Icon class="mx-2" icon="envelope" />
                         Contact
                     </a>
                 </Navigation>
 
                 <div class="color-mode hidden md:block">
-                    <svg-icon
-                        :class="['theme-icon', 'cursor-pointer']"
-                        :name="colorIcon"
+                    <Icon
+                        class="theme-icon cursor-pointer"
+                        :icon="colorIcon"
                         width="24"
                         height="24"
                         @click="onUpdateTheme"
@@ -71,9 +71,9 @@
                             class="color-mode flex cursor-pointer py-3"
                             @click="onUpdateTheme"
                         >
-                            <svg-icon
+                            <Icon
                                 class="theme-icon cursor-pointer pr-2"
-                                :name="colorIcon"
+                                :icon="colorIcon"
                                 width="24"
                                 height="24"
                             />
@@ -94,7 +94,7 @@
         </section>
         <!-- <div class="angle angle-v-down-transparent"></div> -->
         <section id="about" class="about bg-primary">
-            <div class="container mx-auto py-8 w-5/6">
+            <div :ref="sections.about" class="container mx-auto py-8 w-5/6">
                 <h4 class="text-base">About me</h4>
                 <h3 class="text-lg">Who am I?</h3>
                 <p>
@@ -117,7 +117,11 @@
                     <Icon icon="pdf" class="pl-1" />
                 </Button>
             </div>
-            <div id="skills" class="container mx-auto py-8 w-5/6">
+            <div
+                :ref="sections.experience"
+                id="skills"
+                class="container mx-auto py-8 w-5/6"
+            >
                 <h4 class="text-base">Skills</h4>
                 <h3 class="text-lg">What can I do?</h3>
                 <p>
@@ -181,7 +185,7 @@
             </div>
         </section>
         <div class="angle angle-slant-down"></div>
-        <section id="experience" class="about bg-primary">
+        <section :ref="sections.contact" id="contact" class="about bg-primary">
             <div class="container mx-auto py-8 w-5/6">
                 <h4 class="text-base">Contact</h4>
                 <h3 class="text-lg">Let's chat</h3>

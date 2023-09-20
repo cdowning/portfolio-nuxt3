@@ -1,20 +1,28 @@
-// import { defineComponent, useContext, ref, watch } from 'vue';
+import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
     name: 'Index',
     setup() {
         // We only need value from the color mode object
+        // TODO: Clean this up
         const { value: $colorMode } = ref(useColorMode());
 
         // const {
         //     $colorMode: { value },
         // } = useNuxtApp();
 
+        // Refs
         const mobileMenu = ref<boolean>(false);
         const icon = ref<string>('menu');
 
         // Switch to the other theme
         const switchColorTheme = $colorMode.value === 'dark' ? 'light' : 'dark';
+
+        const sections = {
+            about: ref(null),
+            experience: ref(null),
+            contact: ref(null),
+        } as any;
 
         const cards = [
             {
@@ -51,8 +59,10 @@ export default defineComponent({
 
         // Computed
         const colorIcon = computed<string>(() => {
+            console.log($colorMode.value);
             // If no theme is set in settings, defaults to 'light'
             const icon = $colorMode.value === 'dark' ? 'sun' : 'moon';
+            console.log(icon);
             return icon;
         });
         const logoSrc = computed<string>(() => {
@@ -72,6 +82,18 @@ export default defineComponent({
             mobileMenu.value = !mobileMenu.value;
             icon.value = icon.value === 'menu' ? 'close' : 'menu';
         };
+        // scroll to section
+        const scrollTo = (section: string) => {
+            const selected = sections[section]?.value;
+
+            const offset = selected.offsetTop;
+
+            window.scroll({
+                top: offset,
+                left: 0,
+                behavior: 'smooth',
+            });
+        };
 
         return {
             // Data variables
@@ -79,6 +101,7 @@ export default defineComponent({
             icon,
             switchColorTheme,
             cards,
+            sections,
 
             // Computed
             colorIcon,
@@ -88,6 +111,7 @@ export default defineComponent({
             // Methods
             onUpdateTheme,
             onMobileMenu,
+            scrollTo,
         };
     },
 });

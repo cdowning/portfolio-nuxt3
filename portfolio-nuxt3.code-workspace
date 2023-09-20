@@ -5,16 +5,16 @@
         }
     ],
     "settings": {
-        "editor.tabSize": 4,
+        // "editor.tabSize": 4,
         "editor.formatOnSave": true,
         "editor.formatOnType": false,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.quickSuggestionsDelay": 5,
         "vetur.format.defaultFormatter.html": "none",
-        "vetur.format.options.tabSize": 4,
+        // "vetur.format.options.tabSize": 4,
         "vetur.format.options.useTabs": true,
-        "prettier.tabWidth": 4,
+        // "prettier.tabWidth": 4,
         "editor.trimAutoWhitespace": true,
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
