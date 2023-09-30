@@ -193,10 +193,10 @@
                     If you would like to get in touch with me, feel free to
                     shoot me an email or text.
                 </p>
-                <!-- <Button>
+                <Button>
                     Resume
                     <Icon icon="pdf" class="pl-1" />
-                </Button> -->
+                </Button>
             </div>
         </section>
         <footer class="bg-cream-50 text-cream-10">

@@ -51,6 +51,9 @@ export const Primary: Story = {
         isRounded: true,
         text: 'Hello there!',
         isFullWidth: false,
+        isExternal: false,
+        disabled: false,
+        outlined: false,
     },
 };
 export const Secondary: Story = {

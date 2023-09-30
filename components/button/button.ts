@@ -2,9 +2,9 @@ const Button = defineComponent({
     name: 'Button',
     // inheritAttrs: true,
     props: {
-        type: {
-            type: String,
-            default: '',
+        isExternal: {
+            type: Boolean,
+            default: false,
         },
         // TODO: Use tailwind bg-color class
         // primary, secondary, link
@@ -32,6 +32,10 @@ const Button = defineComponent({
         isRounded: {
             type: Boolean,
             default: true,
+        },
+        location: {
+            type: String,
+            default: '',
         },
     },
     setup(props, context) {
