@@ -48,6 +48,13 @@ pnpm run build
 yarn build
 ```
 
+Generate static site
+```bash
+# yarn
+yarn generate
+```
+You can preview this build by running `npx serve .output/public`
+
 Locally preview production build:
 
 ```bash

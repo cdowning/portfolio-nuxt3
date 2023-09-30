@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
+    ssr: false,
+
     pages: true,
+
+    devServer: {
+        port: 8000,
+    },
 
     css: [
         'assets/scss/fonts.scss',

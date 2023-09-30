@@ -1,5 +1,3 @@
-import { defineComponent, ref, watch } from 'vue';
-
 export default defineComponent({
     name: 'Index',
     setup() {
@@ -59,11 +57,8 @@ export default defineComponent({
 
         // Computed
         const colorIcon = computed<string>(() => {
-            console.log($colorMode.value);
             // If no theme is set in settings, defaults to 'light'
-            const icon = $colorMode.value === 'dark' ? 'sun' : 'moon';
-            console.log(icon);
-            return icon;
+            return $colorMode.value === 'dark' ? 'sun' : 'moon';
         });
         const logoSrc = computed<string>(() => {
             return `caitlin-hawley-${$colorMode.value}`;
