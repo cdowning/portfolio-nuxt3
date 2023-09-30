@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/vue3';
 
+import { themes } from '@storybook/theming';
+
 import '../assets/scss/tailwind.scss'; // replace with the name of your tailwind css file
 
 const preview: Preview = {
@@ -9,6 +11,28 @@ const preview: Preview = {
             matchers: {
                 color: /(background|color)$/i,
                 date: /Date$/,
+            },
+        },
+        docs: {
+            theme: themes.dark,
+        },
+        darkMode: {
+            current: 'light',
+            classTarget: 'html',
+            darkClass: 'dark-mode',
+            stylePreview: true,
+            dark: {
+                ...themes.dark,
+                brandTitle: 'My custom storybook',
+                brandUrl: 'http://caitlinhawley.com',
+                brandImage: './public/caitlin-hawley-dark.svg',
+            },
+            // Override the default light theme
+            light: {
+                ...themes.normal,
+                brandTitle: 'My custom storybook',
+                brandUrl: 'http://caitlinhawley.com',
+                brandImage: './public/caitlin-hawley-light.svg',
             },
         },
     },

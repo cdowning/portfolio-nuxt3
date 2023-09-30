@@ -50,7 +50,7 @@ export const Primary: Story = {
         size: 'lg',
         isRounded: true,
         text: 'Hello there!',
-        isFullWidth: true,
+        isFullWidth: false,
     },
 };
 export const Secondary: Story = {
