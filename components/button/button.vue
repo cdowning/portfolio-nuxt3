@@ -1,26 +1,14 @@
 <template>
     <button
-        v-if="!type"
         :class="[
             'btn inline-flex items-center justify-center',
+            'brn-' + variant,
             ...buttonClasses,
         ]"
         :disabled="disabled"
-        v-on="$listeners"
     >
         <slot />
     </button>
-    <NuxtLink
-        v-else
-        :class="[
-            'btn inline-flex items-center justify-center',
-            ...buttonClasses,
-        ]"
-        v-bind="$attrs"
-        :to="$attrs.location"
-    >
-        <slot />
-    </NuxtLink>
 </template>
 
 <script lang="ts" src="./button.ts"></script>

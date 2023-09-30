@@ -15,6 +15,9 @@ pnpm install
 
 # yarn
 yarn install
+
+# bun
+bun install
 ```
 
 ## Development Server
@@ -30,7 +33,9 @@ pnpm run dev
 
 # yarn
 yarn dev
-yarn dev -o
+
+# bun
+bun run dev
 ```
 
 ## Production
@@ -46,14 +51,10 @@ pnpm run build
 
 # yarn
 yarn build
-```
 
-Generate static site
-```bash
-# yarn
-yarn generate
+# bun
+bun run build
 ```
-You can preview this build by running `npx serve .output/public`
 
 Locally preview production build:
 
@@ -66,6 +67,9 @@ pnpm run preview
 
 # yarn
 yarn preview
+
+# bun
+bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -74,8 +74,8 @@
                             <Icon
                                 class="theme-icon cursor-pointer pr-2"
                                 :icon="colorIcon"
-                                :width="24"
-                                :height="24"
+                                width="24"
+                                height="24"
                             />
                             Switch to {{ switchColorTheme }} theme
                         </div>
@@ -114,7 +114,7 @@
                 </p>
                 <Button>
                     Resume
-                    <!-- <Icon icon="pdf" class="pl-1" /> -->
+                    <Icon icon="pdf" class="pl-1" />
                 </Button>
             </div>
             <div
@@ -142,24 +142,24 @@
                 <div
                     class="flex flex-wrap justify-center md:gap-y-4 md:gap-x-6"
                 >
-                    <Icon icon="sass" size="xl" class="sass cursor-pointer" title="Sass" />
-                    <Icon icon="storybook" size="xl" class="storybook cursor-pointer" title="Storybook" />
-                    <Icon icon="html5" size="xl" class="html cursor-pointer" title="HTML" />
-                    <Icon icon="css3" size="xl" class="css cursor-pointer" title="CSS" />
-                    <Icon icon="tailwind" size="xl" class="tailwind cursor-pointer" title="Tailwind" />
-                    <Icon icon="nuxt" size="xl" class="nuxt cursor-pointer" title="Nuxt" />
-                    <Icon icon="jquery" size="xl" class="jquery cursor-pointer" title="jQuery" />
-                    <Icon icon="jira" size="xl" class="jira cursor-pointer" title="Jira" />
-                    <Icon icon="javascript" size="xl" class="javascript cursor-pointer" title="Javascript" />
-                    <Icon icon="jest" size="xl" class="jest cursor-pointer" title="Jest" />
-                    <Icon icon="git" size="xl" class="git cursor-pointer" title="Git" />
-                    <Icon icon="bootstrap" size="xl" class="bootstrap cursor-pointer" title="Bootstrap" />
-                    <Icon icon="figma" size="xl" class="figma cursor-pointer" title="Figma" />
-                    <Icon icon="typescript" size="xl" class="typescript cursor-pointer" title="Typescript" />
-                    <Icon icon="vscode" size="xl" class="vscode cursor-pointer" title="VSCode" />
-                    <Icon icon="vuetify" size="xl" class="vuetify cursor-pointer" title="Vuetify" />
-                    <Icon icon="vue" size="xl" class="vue cursor-pointer" title="Vue" />
-                    <Icon icon="wordpress" size="xl" class="wordpress cursor-pointer" title="Wordpress" />
+                    <Icon icon="sass" size="xl" class="sass" />
+                    <Icon icon="storybook" size="xl" class="storybook" />
+                    <Icon icon="html5" size="xl" class="html" />
+                    <Icon icon="css3" size="xl" class="css" />
+                    <Icon icon="tailwind" size="xl" class="tailwind" />
+                    <Icon icon="nuxt" size="xl" class="nuxt" />
+                    <Icon icon="jquery" size="xl" class="jquery" />
+                    <Icon icon="jira" size="xl" class="jira" />
+                    <Icon icon="javascript" size="xl" class="javascript" />
+                    <Icon icon="jest" size="xl" class="jest" />
+                    <Icon icon="git" size="xl" class="git" />
+                    <Icon icon="bootstrap" size="xl" class="bootstrap" />
+                    <Icon icon="figma" size="xl" class="figma" />
+                    <Icon icon="typescript" size="xl" class="typescript" />
+                    <Icon icon="vscode" size="xl" class="vscode" />
+                    <Icon icon="vuetify" size="xl" class="vuetify" />
+                    <Icon icon="vue" size="xl" class="vue" />
+                    <Icon icon="wordpress" size="xl" class="wordpress" />
                 </div>
             </div>
         </section>

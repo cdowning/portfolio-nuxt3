@@ -43,8 +43,11 @@ export default defineComponent({
 
         // We might need this
         const iconColor = computed<string>(() => {
-            const color = !hoverState.value && !props.hoverColor ? props.color : props.hoverColor;
-            return `${color}`;
+            if (!hoverState.value && !props.hoverColor) {
+                return `${props.color}`;
+            } else {
+                return `${props.hoverColor}`;
+            }
         });
 
         const setHover = (value: boolean) => {

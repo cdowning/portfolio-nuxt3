@@ -2,12 +2,14 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
-    ssr: false,
-
     pages: true,
 
     devServer: {
-        port: 8000,
+        port: 6000,
+    },
+
+    typescript: {
+        shim: false,
     },
 
     css: [
@@ -16,24 +18,17 @@ export default defineNuxtConfig({
         'assets/scss/main.scss',
     ],
 
-    // Auto import components: https://nuxt.com/docs/guide/directory-structure/components
-    // This fixes the warning regarding duplicate component names
     components: [{ path: '~/components', extensions: ['vue'] }],
 
     modules: [
-        // '@pinia/nuxt',
-
-        // https://i18n.nuxtjs.org/
-        // '@intlify/nuxt3',
-
         // https://tailwindcss.nuxtjs.org/
         '@nuxtjs/tailwindcss',
 
-        // https://vueuse.org/guide/#installation
-        // '@vueuse/nuxt',
-
         // https://color-mode.nuxtjs.org/
         '@nuxtjs/color-mode',
+
+        // https://storybook.nuxtjs.org/
+        '@nuxtjs/storybook',
     ],
 
     tailwindcss: {
@@ -42,9 +37,14 @@ export default defineNuxtConfig({
         exposeConfig: true,
     },
 
-    // https://color-mode.nuxtjs.org/#configuration
+    // https://github.com/nuxt-modules/storybook
+    // storybook: {
+    //     url: 'http://localhost:6006',
+    //     storybookRoute: '/__storybook__',
+    //     port: 6006,
+    // },
+
     // colorMode: {
-    //     classSuffix: '-mode',
-    //     preference: 'light',
+    //     classSuffix: '',
     // },
 });

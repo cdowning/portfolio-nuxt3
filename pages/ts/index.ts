@@ -3,7 +3,7 @@ export default defineComponent({
     setup() {
         // We only need value from the color mode object
         // TODO: Clean this up
-        const { value: $colorMode } = ref(useColorMode());
+        const $colorMode = useColorMode();
 
         // const {
         //     $colorMode: { value },
@@ -58,7 +58,8 @@ export default defineComponent({
         // Computed
         const colorIcon = computed<string>(() => {
             // If no theme is set in settings, defaults to 'light'
-            return $colorMode.value === 'dark' ? 'sun' : 'moon';
+            const icon = $colorMode.value === 'dark' ? 'sun' : 'moon';
+            return icon;
         });
         const logoSrc = computed<string>(() => {
             return `caitlin-hawley-${$colorMode.value}`;

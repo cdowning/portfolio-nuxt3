@@ -37,7 +37,6 @@ const Button = defineComponent({
         const buttonClasses = computed(function () {
             return [
                 'btn-' + props.size,
-                { ['btn-' + props.variant]: props.variant },
                 { 'has-icon': !!context.slots.icon },
                 { 'w-full': !!props.isFullWidth },
                 { 'btn-outlined': !!props.outlined },

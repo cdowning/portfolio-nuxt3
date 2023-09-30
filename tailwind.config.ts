@@ -1,12 +1,17 @@
+/** @type {import('tailwindcss').Config} */
+
 const colors = require('./colors.ts');
 
-// Dark mode guide: https://color-mode.nuxtjs.org/#tailwind-dark-mode-plugin
-
-// If I need to reference variables in TS - https://tailwindcss.com/docs/configuration#referencing-in-java-script
-
-module.exports = {
+export default {
     darkMode: 'class', // or 'media' or 'class'
     important: true,
+    content: [
+        `components/**/*.{vue,js}`,
+        `layouts/**/*.vue`,
+        `pages/**/*.vue`,
+        `plugins/**/*.{js,ts}`,
+        `nuxt.config.{js,ts}`,
+    ],
     theme: {
         // Using this for color palette in storybook
         colors: {
@@ -79,15 +84,5 @@ module.exports = {
             },
         },
     },
-    variants: {
-        extend: {},
-    },
     plugins: [],
-    content: [
-        `components/**/*.{vue,js}`,
-        `layouts/**/*.vue`,
-        `pages/**/*.vue`,
-        `plugins/**/*.{js,ts}`,
-        `nuxt.config.{js,ts}`,
-    ],
 };
