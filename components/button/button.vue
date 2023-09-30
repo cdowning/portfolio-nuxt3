@@ -2,7 +2,7 @@
     <button
         :class="[
             'btn inline-flex items-center justify-center',
-            'brn-' + variant,
+            'btn-' + variant,
             ...buttonClasses,
         ]"
         :disabled="disabled"

@@ -12,6 +12,7 @@ const Button = defineComponent({
             type: String,
             default: 'primary',
         },
+        // sm, md, lg, xl
         size: {
             type: String,
             default: 'md',

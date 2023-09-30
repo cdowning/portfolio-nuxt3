@@ -8,6 +8,16 @@ import Button from './button.vue';
 const meta: Meta<typeof Button> = {
     title: 'Components/Button',
     component: Button,
+    argTypes: {
+        variant: {
+            options: ['primary', 'secondary'],
+            control: { type: 'select' },
+        },
+        size: {
+            options: ['sm', 'md', 'lg', 'xl'],
+            control: { type: 'select' },
+        },
+    },
     tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
@@ -20,7 +30,10 @@ type Story = StoryObj<typeof Button>;
  * See https://storybook.js.org/docs/vue/api/csf
  * to learn how to use render functions.
  */
+// https://storybook.js.org/docs/vue/writing-stories/args#args-composition - argTypes
 // Multiple component groups. Example: button groups
+
+// TODO: Slots: https://storybook.js.org/docs/vue/writing-stories/args#args-can-modify-any-aspect-of-your-component
 export const Primary: Story = {
     name: 'Primary Button', // name of story
     render: (args: any) => ({
@@ -29,7 +42,7 @@ export const Primary: Story = {
             return { args };
         },
         template: `<Button v-bind="args">
-            {{args.text}}
+            {{ args.text }}
         </Button>`,
     }),
     args: {
@@ -37,6 +50,7 @@ export const Primary: Story = {
         size: 'lg',
         isRounded: true,
         text: 'Hello there!',
+        isFullWidth: true,
     },
 };
 export const Secondary: Story = {
