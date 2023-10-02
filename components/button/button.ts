@@ -2,10 +2,10 @@ const Button = defineComponent({
     name: 'Button',
     // inheritAttrs: true,
     props: {
-        isExternal: {
-            type: Boolean,
-            default: false,
-        },
+        // isExternal: {
+        //     type: Boolean,
+        //     default: false,
+        // },
         // TODO: Use tailwind bg-color class
         // primary, secondary, link
         variant: {

@@ -1,14 +1,4 @@
-// Check out this color scheme
-// https://www.canva.com/colors/color-palettes/desert-sunset/
-// https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533
-
-// bg-yellow #f5cb5c
-// bg-midnight #073B4C
-// bg-olive #9C9F4B
-// bg-blush #F9BFB2
-// bg-cream #FCE8DA
-
-module.exports = {
+const colors = {
     black: 'rgb(0, 0, 0)',
     white: '#ffffff',
 
@@ -137,3 +127,5 @@ module.exports = {
     //     60: '#667f66',
     // },
 };
+
+export default colors;

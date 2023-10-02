@@ -1,6 +1,5 @@
 <template>
     <button
-        v-if="!isExternal"
         :class="[
             'btn inline-flex items-center justify-center',
             'btn-' + variant,
@@ -10,7 +9,7 @@
     >
         <slot />
     </button>
-    <NuxtLink
+    <!-- <NuxtLink
         v-else
         :class="[
             'btn inline-flex items-center justify-center',
@@ -20,7 +19,7 @@
         :to="location"
     >
         <slot />
-    </NuxtLink>
+    </NuxtLink> -->
 </template>
 
 <script lang="ts" src="./button.ts"></script>

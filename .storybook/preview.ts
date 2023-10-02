@@ -14,25 +14,30 @@ const preview: Preview = {
             },
         },
         docs: {
-            theme: themes.dark,
+            // theme: themes.dark,
         },
         darkMode: {
             current: 'light',
             classTarget: 'html',
             darkClass: 'dark-mode',
             stylePreview: true,
-            dark: {
-                ...themes.dark,
-                brandTitle: 'My custom storybook',
-                brandUrl: 'http://caitlinhawley.com',
-                brandImage: './public/caitlin-hawley-dark.svg',
-            },
-            // Override the default light theme
-            light: {
-                ...themes.normal,
-                brandTitle: 'My custom storybook',
-                brandUrl: 'http://caitlinhawley.com',
-                brandImage: './public/caitlin-hawley-light.svg',
+            // dark: {
+            //     ...themes.dark,
+            //     brandTitle: 'My custom storybook',
+            //     brandUrl: 'http://caitlinhawley.com',
+            //     brandImage: './caitlin-hawley-dark.svg',
+            // },
+            // // Override the default light theme
+            // light: {
+            //     ...themes.normal,
+            //     brandTitle: 'My custom storybook',
+            //     brandUrl: 'http://caitlinhawley.com',
+            //     brandImage: './caitlin-hawley-light.svg',
+            // },
+        },
+        options: {
+            storySort: {
+                order: ['Design System', 'Components'],
             },
         },
     },

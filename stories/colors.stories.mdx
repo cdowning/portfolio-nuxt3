@@ -1,0 +1,34 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+import tailwind from '~/tailwind.config';
+export const tailwindColors = tailwind.theme.colors;
+
+<Meta title="Design System/Colors" />
+
+{/* https://storybook.js.org/docs/vue/api/doc-block-colorpalette */}
+
+# Color Palette
+
+<ColorPalette>
+    <ColorItem
+        title="Yellow"
+        subtitle="Primary"
+        colors={tailwindColors.yellow}
+    />
+    <ColorItem title="Green" subtitle="Primary" colors={tailwindColors.green} />
+    <ColorItem title="Blush" subtitle="Primary" colors={tailwindColors.blush} />
+    <ColorItem
+        title="Cream"
+        subtitle="Neutrals"
+        colors={tailwindColors.cream}
+    />
+    <ColorItem title="Gray" subtitle="Neutrals" colors={tailwindColors.gray} />
+    <ColorItem title="Rose" subtitle="Secondary" colors={tailwindColors.rose} />
+    <ColorItem title="Teal" subtitle="Secondary" colors={tailwindColors.teal} />
+    <ColorItem title="Blue" subtitle="Secondary" colors={tailwindColors.blue} />
+    <ColorItem
+        title="Purple"
+        subtitle="Secondary"
+        colors={tailwindColors.purple}
+    />
+</ColorPalette>

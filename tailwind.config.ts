@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-const colors = require('./colors.ts');
+import colors from './colors';
 
-export default {
+const tailwind = {
     darkMode: 'class', // or 'media' or 'class'
     important: true,
     content: [
@@ -86,3 +86,4 @@ export default {
     },
     plugins: [],
 };
+export default tailwind;
