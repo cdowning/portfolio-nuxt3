@@ -1,7 +1,7 @@
 // Button.stories.ts
 
 // Replace vue3 with vue if you are using Storybook for Vue 2
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Args, Meta, StoryObj } from '@storybook/vue3';
 
 import Button from './button.vue';
 
@@ -16,6 +16,15 @@ const meta: Meta<typeof Button> = {
         size: {
             options: ['sm', 'md', 'lg', 'xl'],
             control: { type: 'select' },
+        },
+        default: {
+            control: 'text',
+            description: 'Slot content',
+            table: {
+                category: 'Slots',
+                type: { summary: 'html' },
+                defaultValue: { summary: 'null' },
+            },
         },
     },
     tags: ['autodocs'],
@@ -36,20 +45,20 @@ type Story = StoryObj<typeof Button>;
 // TODO: Slots: https://storybook.js.org/docs/vue/writing-stories/args#args-can-modify-any-aspect-of-your-component
 export const Primary: Story = {
     name: 'Primary Button', // name of story
-    render: (args: any) => ({
+    render: (args: Args) => ({
         components: { Button },
         setup() {
             return { args };
         },
         template: `<Button v-bind="args">
-            {{ args.text }}
+            {{ args.default }}
         </Button>`,
     }),
     args: {
+        default: 'Hello there',
         variant: 'primary',
-        size: 'lg',
+        size: 'md',
         isRounded: true,
-        text: 'Hello there!',
         isFullWidth: false,
         disabled: false,
         outlined: false,
@@ -57,13 +66,12 @@ export const Primary: Story = {
 };
 export const Secondary: Story = {
     name: 'Secondary Button', // name of story
-    render: (args: any) => ({
+    render: (args: Args) => ({
         components: { Button },
         setup() {
             return { args };
         },
         template: '<Button v-bind="args">Hello</Button>',
-        // template: '<Button variant="primary">Hello</Button>',
     }),
     args: {
         ...Primary.args,

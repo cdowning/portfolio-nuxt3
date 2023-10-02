@@ -1,41 +1,37 @@
+/** Buttons are used for any CTA */
 const Button = defineComponent({
     name: 'Button',
     // inheritAttrs: true,
     props: {
-        // isExternal: {
-        //     type: Boolean,
-        //     default: false,
-        // },
-        // TODO: Use tailwind bg-color class
-        // primary, secondary, link
+        /** Determines the color of the button */
         variant: {
             type: String,
             default: 'primary',
         },
-        // sm, md, lg, xl
+        /** Size of the button */
         size: {
             type: String,
             default: 'md',
         },
+        /** Sets the button to width 100% */
         isFullWidth: {
             type: Boolean,
             default: false,
         },
+        /** Adds disabled attribute */
         disabled: {
             type: Boolean,
             default: false,
         },
+        /** Outline is buttons with no background color */
         outlined: {
             type: Boolean,
             default: false,
         },
+        /** Adds border radius */
         isRounded: {
             type: Boolean,
             default: true,
-        },
-        location: {
-            type: String,
-            default: '',
         },
     },
     setup(props, context) {
