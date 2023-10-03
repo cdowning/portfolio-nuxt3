@@ -1,14 +1,13 @@
 <template>
     <div class="logo">
-        <nuxt-link :to="to">
-            <img
-                :src="srcPath"
-                :width="width"
-                :height="height"
-                :alt="alt"
-                v-bind="$attrs"
-            />
-        </nuxt-link>
+        <img
+            class="logo"
+            :src="srcPath"
+            :width="width"
+            :height="height"
+            :alt="alt"
+            v-bind="$attrs"
+        />
     </div>
 </template>
 

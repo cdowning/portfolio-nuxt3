@@ -7,10 +7,6 @@ interface fileNameObject {
 const Logo = defineComponent({
     name: 'Logo',
     props: {
-        to: {
-            type: String,
-            default: '/',
-        },
         src: {
             type: String,
             default: 'caitlin-hawley-light',

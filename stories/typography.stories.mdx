@@ -1,0 +1,48 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+import tailwind from '~/tailwind.config';
+export const fontSizes = tailwind.theme.fontSize;
+export const fontFamily = tailwind.theme.fontFamily;
+
+<Meta title="Design System/Typography" />
+
+export const typography = {
+    type: {
+        poppins: fontFamily.poppins,
+        milkshake: fontFamily.milkshake,
+    },
+    weight: {
+        'extra-light': '200',
+        light: '300',
+        regular: '400',
+        bold: '700',
+    },
+    size: fontSizes,
+};
+
+export const SampleText = 'About me';
+
+# Type Scale
+
+This modular type scale uses a base font size of 16px. The type scale is based off of the 1.250 Major Third Scale.
+
+## Poppins
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+    fontSizes={[
+        typography.size['4xl'],
+        typography.size['3xl'],
+        typography.size['2xl'],
+        typography.size['xl'],
+        typography.size['lg'],
+        typography.size['md'],
+        typography.size['base'],
+        typography.size['sm'],
+        typography.size['xs'],
+    ]}
+    fontWeight={typography.weight.regular}
+    sampleText={SampleText}
+    fontFamily={typography.type.poppins}
+/>

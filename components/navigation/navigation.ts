@@ -3,6 +3,7 @@
 const Navigation = defineComponent({
     name: 'Navigation',
     props: {
+        /** Direction of links */
         direction: {
             type: String,
             default: 'horizontal',

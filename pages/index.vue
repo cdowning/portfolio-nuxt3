@@ -132,6 +132,10 @@
                     but <span class="highlight tailwind">Tailwind</span> is the
                     one I love the most.
                 </p>
+                <Button class="mb-2">
+                    View Design System
+                    <Icon icon="storybook" class="pl-1" />
+                </Button>
 
                 <h3 class="text-lg">Skill Roadmap</h3>
                 <p>
@@ -142,24 +146,112 @@
                 <div
                     class="flex flex-wrap justify-center md:gap-y-4 md:gap-x-6"
                 >
-                    <Icon icon="sass" size="xl" class="sass" />
-                    <Icon icon="storybook" size="xl" class="storybook" />
-                    <Icon icon="html5" size="xl" class="html" />
-                    <Icon icon="css3" size="xl" class="css" />
-                    <Icon icon="tailwind" size="xl" class="tailwind" />
-                    <Icon icon="nuxt" size="xl" class="nuxt" />
-                    <Icon icon="jquery" size="xl" class="jquery" />
-                    <Icon icon="jira" size="xl" class="jira" />
-                    <Icon icon="javascript" size="xl" class="javascript" />
-                    <Icon icon="jest" size="xl" class="jest" />
-                    <Icon icon="git" size="xl" class="git" />
-                    <Icon icon="bootstrap" size="xl" class="bootstrap" />
-                    <Icon icon="figma" size="xl" class="figma" />
-                    <Icon icon="typescript" size="xl" class="typescript" />
-                    <Icon icon="vscode" size="xl" class="vscode" />
-                    <Icon icon="vuetify" size="xl" class="vuetify" />
-                    <Icon icon="vue" size="xl" class="vue" />
-                    <Icon icon="wordpress" size="xl" class="wordpress" />
+                    <a
+                        href="https://sass-lang.com/"
+                        target="_blank"
+                        title="Sass"
+                    >
+                        <Icon icon="sass" size="xl" class="sass" />
+                    </a>
+                    <a
+                        href="https://storybook.js.org/"
+                        target="_blank"
+                        title="Storybook"
+                    >
+                        <Icon icon="storybook" size="xl" class="storybook" />
+                    </a>
+                    <a
+                        href="https://html.com/html5/"
+                        target="_blank"
+                        title="HTML"
+                    >
+                        <Icon icon="html5" size="xl" class="html" />
+                    </a>
+                    <a href="https://www.css3.com/" target="_blank" title="CSS">
+                        <Icon icon="css3" size="xl" class="css" />
+                    </a>
+                    <a
+                        href="https://tailwindcss.com/"
+                        target="_blank"
+                        title="Tailwind"
+                    >
+                        <Icon icon="tailwind" size="xl" class="tailwind" />
+                    </a>
+                    <a href="https://nuxt.com/" target="_blank" title="Nuxt">
+                        <Icon icon="nuxt" size="xl" class="nuxt" />
+                    </a>
+                    <a
+                        href="https://jquery.com/"
+                        target="_blank"
+                        title="JQuery"
+                    >
+                        <Icon icon="jquery" size="xl" class="jquery" />
+                    </a>
+                    <a
+                        href="https://www.atlassian.com/software/jira"
+                        target="_blank"
+                        title="Jira"
+                    >
+                        <Icon icon="jira" size="xl" class="jira" />
+                    </a>
+                    <a
+                        href="https://www.javascript.com/"
+                        target="_blank"
+                        title="Javascript"
+                    >
+                        <Icon icon="javascript" size="xl" class="javascript" />
+                    </a>
+                    <a href="https://jestjs.io/" target="_blank" title="Jest">
+                        <Icon icon="jest" size="xl" class="jest" />
+                    </a>
+                    <a href="https://git-scm.com/" target="_blank" title="Git">
+                        <Icon icon="git" size="xl" class="git" />
+                    </a>
+                    <a
+                        href="https://getbootstrap.com/"
+                        target="_blank"
+                        title="Bootstrap"
+                    >
+                        <Icon icon="bootstrap" size="xl" class="bootstrap" />
+                    </a>
+                    <a
+                        href="https://www.figma.com/"
+                        target="_blank"
+                        title="Figma"
+                    >
+                        <Icon icon="figma" size="xl" class="figma" />
+                    </a>
+                    <a
+                        href="https://www.typescriptlang.org/"
+                        target="_blank"
+                        title="Typescript"
+                    >
+                        <Icon icon="typescript" size="xl" class="typescript" />
+                    </a>
+                    <a
+                        href="https://code.visualstudio.com/"
+                        target="_blank"
+                        title="VS Code"
+                    >
+                        <Icon icon="vscode" size="xl" class="vscode" />
+                    </a>
+                    <a
+                        href="https://vuetifyjs.com/en/"
+                        target="_blank"
+                        title="Vuetify"
+                    >
+                        <Icon icon="vuetify" size="xl" class="vuetify" />
+                    </a>
+                    <a href="https://vuejs.org/" target="_blank" title="Vue">
+                        <Icon icon="vue" size="xl" class="vue" />
+                    </a>
+                    <a
+                        href="https://wordpress.com/"
+                        target="_blank"
+                        title="Wordpress"
+                    >
+                        <Icon icon="wordpress" size="xl" class="wordpress" />
+                    </a>
                 </div>
             </div>
         </section>

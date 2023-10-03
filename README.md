@@ -73,3 +73,17 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+## Storybook
+
+```bash
+# Serve up storybook
+yarn storybook
+
+# Generate storybook static site
+yarn build-storybook
+
+# Serve up static generated site
+npx serve storybook-static
+```
