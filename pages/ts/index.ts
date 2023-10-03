@@ -1,13 +1,9 @@
 export default defineComponent({
-    name: 'Index',
     setup() {
         // We only need value from the color mode object
-        // TODO: Clean this up
         const $colorMode = useColorMode();
 
-        // const {
-        //     $colorMode: { value },
-        // } = useNuxtApp();
+        const date = useDate();
 
         // Refs
         const mobileMenu = ref<boolean>(false);
@@ -93,6 +89,8 @@ export default defineComponent({
 
         return {
             // Data variables
+            date,
+
             mobileMenu,
             icon,
             switchColorTheme,

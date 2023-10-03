@@ -2,11 +2,11 @@ import type { Config } from 'tailwindcss';
 
 import colors from './colors';
 
-const tailwind = {
+export default {
     darkMode: 'class', // or 'media' or 'class'
     important: true,
     content: [
-        `components/**/*.{vue,js}`,
+        `components/**/*.{vue,js,ts}`,
         `layouts/**/*.vue`,
         `pages/**/*.vue`,
         `plugins/**/*.{js,ts}`,
@@ -85,5 +85,4 @@ const tailwind = {
         },
     },
     plugins: [],
-};
-export default tailwind;
+} satisfies Config;

@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
 
         // https://storybook.nuxtjs.org/
-        '@nuxtjs/storybook',
+        // '@nuxtjs/storybook',
     ],
 
     tailwindcss: {
@@ -38,20 +38,16 @@ export default defineNuxtConfig({
     },
 
     // https://github.com/nuxt-modules/storybook
-    storybook: {
-        url: 'http://localhost:6006',
-        storybookRoute: '/__storybook__',
-        port: 6006,
-    },
-
-    // colorMode: {
-    //     classSuffix: '',
+    // storybook: {
+    //     url: 'http://localhost:6006',
+    //     storybookRoute: '/__storybook__',
+    //     port: 6006,
     // },
 
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
+    // postcss: {
+    //     plugins: {
+    //         tailwindcss: {},
+    //         autoprefixer: {},
+    //     },
+    // },
 });

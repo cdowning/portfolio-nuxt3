@@ -74,8 +74,8 @@
                             <Icon
                                 class="theme-icon cursor-pointer pr-2"
                                 :icon="colorIcon"
-                                width="24"
-                                height="24"
+                                :width="24"
+                                :height="24"
                             />
                             Switch to {{ switchColorTheme }} theme
                         </div>
@@ -291,14 +291,18 @@
                 </Button>
             </div>
         </section>
-        <footer class="bg-cream-50 text-cream-10">
-            <div
-                class="flex justify-evenly md:justify-start container mx-auto py-8 w-5/6"
-            >
-                <Icon icon="github" size="lg" color="cream-10" />
-                <Icon icon="linkedin-circle" size="lg" color="cream-10" />
-                <Icon icon="codepen" size="lg" color="cream-10" />
-                <Icon icon="twitter" size="lg" color="cream-10" />
+        <footer class="flex bg-cream-50 text-cream-10">
+            <div class="flex items-center container mx-auto py-8 w-5/6">
+                <div class="social-icons grow">
+                    <Icon icon="github" size="lg" color="cream-10" />
+                    <Icon icon="linkedin-circle" size="lg" color="cream-10" />
+                    <Icon icon="codepen" size="lg" color="cream-10" />
+                    <Icon icon="twitter" size="lg" color="cream-10" />
+                </div>
+
+                <span>
+                    &#169; {{ date.local().toFormat('y') }} Caitlin Hawley
+                </span>
             </div>
         </footer>
     </div>
