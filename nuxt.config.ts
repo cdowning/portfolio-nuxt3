@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     pages: true,
 
     devServer: {
-        port: 6000,
+        port: 3200,
     },
 
     typescript: {

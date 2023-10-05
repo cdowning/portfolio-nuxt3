@@ -1,0 +1,32 @@
+.avatar {
+    // Sizes
+    &.avatar-sm {
+        width: 48px;
+        height: 48px;
+        max-width: 48px;
+        max-height: 48px;
+    }
+    &.avatar-md {
+        width: 64px;
+        height: 64px;
+        max-width: 64px;
+        max-height: 64px;
+    }
+    &.avatar-lg {
+        width: 128px;
+        height: 128px;
+        max-width: 128px;
+        max-height: 128px;
+    }
+
+    // Shapes
+    &.avatar-circle {
+        border-radius: 50%;
+    }
+
+    // Placeholder
+    .placeholder {
+        width: 100%;
+        padding: 1rem;
+    }
+}

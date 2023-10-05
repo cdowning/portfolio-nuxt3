@@ -1,5 +1,4 @@
 <template>
-    <!-- root element -->
     <div class="w-full flex flex-col">
         <!-- Created a background element for blur and potential parallax -->
         <div class="background flex-none"></div>
