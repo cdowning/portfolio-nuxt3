@@ -1,10 +1,9 @@
 <template>
     <div :class="['avatar', 'avatar-' + size, 'avatar-' + shape, 'bg-gray-10']">
-        <img v-if="src" :src="src" />
         <img
-            v-else
-            class="placeholder"
-            src="~/assets/images/global/female.png"
+            v-if="src"
+            :class="['img', { 'p-3': usePadding }]"
+            :src="imageSource"
         />
     </div>
 </template>

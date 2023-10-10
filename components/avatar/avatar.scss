@@ -1,4 +1,6 @@
 .avatar {
+    overflow: hidden;
+
     // Sizes
     &.avatar-sm {
         width: 48px;
@@ -13,10 +15,21 @@
         max-height: 64px;
     }
     &.avatar-lg {
+        width: 96px;
+        height: 96px;
+        max-width: 96px;
+        max-height: 96px;
+    }
+    &.avatar-xl {
         width: 128px;
         height: 128px;
         max-width: 128px;
         max-height: 128px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 
     // Shapes
@@ -27,6 +40,6 @@
     // Placeholder
     .placeholder {
         width: 100%;
-        padding: 1rem;
+        padding: 0.25rem;
     }
 }
