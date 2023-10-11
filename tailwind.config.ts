@@ -39,6 +39,7 @@ export default {
                 'Helvetica Neue',
                 'sans-serif',
             ],
+            worksans: ['WorkSans', '-apple-system', 'sans-serif'],
             // Add Lobster?
             milkshake: ['Milkshake', '-apple-system', 'serif'],
         },

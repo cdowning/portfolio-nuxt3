@@ -1,7 +1,6 @@
 $font_path: '/assets/fonts/';
 
 // Poppins
-
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins Extra Light'), local('Poppins-Extra-Light'),
@@ -74,6 +73,26 @@ $font_path: '/assets/fonts/';
         url($font_path + 'lato-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Work Sans
+@font-face {
+    font-family: 'WorkSans';
+    src: url($font_path + 'worksans-regular.woff2') format('woff2'),
+        url($font_path + 'worksans-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url($font_path + 'worksans-italic.woff2') format('woff2'),
+        url($font_path + 'worksans-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }

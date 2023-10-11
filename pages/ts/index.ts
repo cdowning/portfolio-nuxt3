@@ -58,7 +58,7 @@ export default defineComponent({
             return icon;
         });
         const logoSrc = computed<string>(() => {
-            return `/caitlin-hawley-${$colorMode.value}`;
+            return `caitlin-hawley-${$colorMode.value}`;
         });
         const mobileIcon = computed<string>(() => {
             return icon.value === 'menu' ? 'menu' : 'close';

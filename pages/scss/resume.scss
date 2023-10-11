@@ -1,0 +1,78 @@
+@import '~/assets/scss/variables';
+
+a {
+    text-decoration: underline;
+    color: $color-green-30;
+}
+
+.event {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+    // &::before {
+    //     top: 10px;
+    //     bottom: -10px;
+    //     left: 22px;
+    //     width: 2px;
+    //     background: $color-cream-40;
+    // }
+
+    // Dot
+    &::after {
+        z-index: 10;
+        top: 32px;
+        left: 17px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid $color-blush-50;
+        background: $color-cream-20;
+    }
+    // @screen md {
+    //     &::before,
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //     }
+    //     &::before {
+    //         top: 10px;
+    //         bottom: -10px;
+    //         left: 22px;
+    //         width: 2px;
+    //         background: $color-cream-40;
+    //     }
+    //     &::after {
+    //         top: 6px;
+    //         left: 1rem;
+    //         width: 14px;
+    //         height: 14px;
+    //         border-radius: 50%;
+    //         border: 1px solid $color-blush-50;
+    //         background: $color-blush-40;
+    //     }
+    // }
+}
+
+.timeline {
+    @screen md {
+        &::before {
+            z-index: 0;
+            content: '';
+            position: absolute;
+            top: 16px;
+            bottom: 265px;
+            left: 23px;
+            width: 2px;
+            background: $color-cream-30;
+        }
+    }
+}
+
+.box {
+    border-radius: 0.75rem;
+    border: 2px solid $color-cream-30;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
