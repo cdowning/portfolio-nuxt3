@@ -25,21 +25,20 @@
                         <section class="flex flex-col relative mb-6 timeline">
                             <!-- Experience Header -->
 
-                            <div
-                                class="section-header timeline mb-4 flex flex-col items-center md:flex-row md:items-start"
+                            <h3
+                                class="mb-4 flex flex-col items-center bg-cream-0 z-10 md:flex-row"
                             >
-                                <!-- <div class="section-header flex items-center justify-center mb-2"> -->
                                 <Icon
-                                    class="relative bg-cream-0 mx-2"
+                                    class="relative mx-2"
                                     icon="briefcase"
                                     size="lg"
                                 />
-                                <h4 class="text-lg">EXPERIENCE</h4>
-                            </div>
+                                <span class="text-lg">EXPERIENCE</span>
+                            </h3>
                             <!-- Quore -->
                             <div class="event relative">
-                                <div class="details text-center box ml-12">
-                                    <h4>Quore</h4>
+                                <div class="details text-center box md:ml-12">
+                                    <h4 class="dot">Quore</h4>
                                     <h3 class="text-md">Frontend Developer</h3>
                                     <h4 class="mb-5">October 2016 - Present</h4>
                                     <ul class="text-left list-disc pl-4">
@@ -74,8 +73,8 @@
                             </div>
                             <!-- NIC -->
                             <div class="event relative">
-                                <div class="details text-center box ml-12">
-                                    <h4>NIC, Inc</h4>
+                                <div class="details text-center box md:ml-12">
+                                    <h4 class="dot">NIC, Inc</h4>
                                     <h3 class="text-md">
                                         Senior User Interface Designer
                                     </h3>
@@ -138,8 +137,8 @@
                             </div>
                             <!-- ARS Interactive -->
                             <div class="event relative">
-                                <div class="details text-center box ml-12">
-                                    <h4>ARS Interactive</h4>
+                                <div class="details text-center box md:ml-12">
+                                    <h4 class="dot">ARS Interactive</h4>
                                     <h3 class="text-md">Frontend Developer</h3>
                                     <h4 class="mb-5">March 2010 - May 2011</h4>
                                     <ul class="text-left list-disc pl-4">
@@ -163,38 +162,41 @@
                             </div>
                         </section>
 
-                        <!-- Experience section -->
-                        <section class="flex flex-col relative mb-6">
+                        <!-- Education section -->
+                        <section class="flex flex-col relative mb-6 timeline">
                             <!-- Experience Header -->
-                            <div
-                                class="section-header mb-4 flex flex-col items-center md:flex-row md:items-start"
+                            <h3
+                                class="mb-4 flex flex-col items-center bg-cream-0 z-10 md:flex-row"
                             >
-                                <!-- TODO: Update the icon -->
                                 <Icon
-                                    class="relative bg-cream-0 mx-2"
+                                    class="relative mx-2"
                                     icon="briefcase"
                                     size="lg"
                                 />
-                                <h4 class="text-lg">EDUCATION</h4>
-                            </div>
-                            <!-- Quore -->
-                            <div class="text-center box">
-                                <h4>
-                                    The Art Institute of Tennessee - Nashville
-                                </h4>
-                                <h3 class="text-md">
-                                    BFA, Interactive Media & Web Design
-                                </h3>
-                                <h4>2007-2009</h4>
+                                <span class="text-lg">EDUCATION</span>
+                            </h3>
+
+                            <!-- Art Institute -->
+                            <div class="event relative">
+                                <div class="details text-center box md:ml-12">
+                                    <h4 class="dot">
+                                        The Art Institute of Tennessee -
+                                        Nashville
+                                    </h4>
+                                    <h3 class="text-md">
+                                        BFA, Interactive Media & Web Design
+                                    </h3>
+                                    <h4 class="mb-0">2007-2009</h4>
+                                </div>
                             </div>
                         </section>
                     </div>
                     <!-- Right column -->
                     <div class="w-full md:max-w-[35%] md:ml-4">
                         <section class="flex flex-col relative mb-6">
-                            <!-- Experience Header -->
-                            <div
-                                class="section-header mb-4 flex flex-col items-center md:flex-row md:items-start"
+                            <!-- SKILLS Header -->
+                            <h3
+                                class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <!-- TODO: ADD GEAR ICON -->
                                 <Icon
@@ -202,14 +204,14 @@
                                     icon="briefcase"
                                     size="lg"
                                 />
-                                <h4 class="text-lg">SKILLS</h4>
-                            </div>
+                                <span class="text-lg">SKILLS</span>
+                            </h3>
                         </section>
                         <!-- TOOLS -->
                         <section class="flex flex-col relative mb-6">
                             <!-- Experience Header -->
-                            <div
-                                class="section-header mb-4 flex flex-col items-center md:flex-row md:items-start"
+                            <h3
+                                class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <!-- TODO: ADD GEAR ICON -->
                                 <Icon
@@ -217,8 +219,8 @@
                                     icon="briefcase"
                                     size="lg"
                                 />
-                                <h4 class="text-lg">TOOLS</h4>
-                            </div>
+                                <span class="text-lg">TOOLS</span>
+                            </h3>
 
                             <ul class="flex justify-center md:block">
                                 <li class="flex items-center mb-2">
@@ -276,8 +278,8 @@
                         <!-- CONNECT -->
                         <section class="flex flex-col relative mb-6">
                             <!-- Experience Header -->
-                            <div
-                                class="section-header mb-4 flex flex-col items-center md:flex-row md:items-start"
+                            <h3
+                                class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <!-- TODO: ADD GEAR ICON -->
                                 <Icon
@@ -285,8 +287,8 @@
                                     icon="briefcase"
                                     size="lg"
                                 />
-                                <h4 class="text-lg">CONNECT</h4>
-                            </div>
+                                <span class="text-lg">CONNECT</span>
+                            </h3>
                         </section>
                     </div>
                 </div>

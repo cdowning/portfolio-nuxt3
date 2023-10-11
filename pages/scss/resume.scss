@@ -6,67 +6,56 @@ a {
 }
 
 .event {
+    // Applies to both mobile and desktop
     &::before,
     &::after {
         content: '';
         position: absolute;
     }
-    // &::before {
-    //     top: 10px;
-    //     bottom: -10px;
-    //     left: 22px;
-    //     width: 2px;
-    //     background: $color-cream-40;
-    // }
 
-    // Dot
-    &::after {
-        z-index: 10;
-        top: 32px;
-        left: 17px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 1px solid $color-blush-50;
-        background: $color-cream-20;
+    // Line - 50% left for mobile
+    &::before {
+        top: -32px;
+        bottom: -10px;
+        left: 50%;
+        width: 2px;
+        background: $color-cream-30;
     }
-    // @screen md {
-    //     &::before,
-    //     &::after {
-    //         content: '';
-    //         position: absolute;
-    //     }
-    //     &::before {
-    //         top: 10px;
-    //         bottom: -10px;
-    //         left: 22px;
-    //         width: 2px;
-    //         background: $color-cream-40;
-    //     }
-    //     &::after {
-    //         top: 6px;
-    //         left: 1rem;
-    //         width: 14px;
-    //         height: 14px;
-    //         border-radius: 50%;
-    //         border: 1px solid $color-blush-50;
-    //         background: $color-blush-40;
-    //     }
-    // }
-}
 
-.timeline {
-    @screen md {
+    // End the timeline line on the last child
+    &:last-child {
         &::before {
-            z-index: 0;
-            content: '';
-            position: absolute;
-            top: 16px;
-            bottom: 265px;
-            left: 23px;
-            width: 2px;
-            background: $color-cream-30;
+            bottom: auto;
+            top: -20px;
+            height: 52px;
+            // top: 0;
+            // height: 32px;
         }
+    }
+
+    @screen md {
+        // Line
+        &::before {
+            left: 23px;
+        }
+
+        // Dot
+        &::after {
+            z-index: 10;
+            top: 32px;
+            left: 17px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid $color-blush-50;
+            background: $color-cream-20;
+        }
+    }
+
+    .details {
+        position: relative;
+        background-color: $color-cream-00;
+        z-index: 10;
     }
 }
 
