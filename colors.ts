@@ -74,6 +74,8 @@ const colors = {
         20: '#c3eef5',
         30: '#b0d6dd',
         40: '#9cbec4',
+        50: '#8cabb0',
+        60: '#7d989d',
     },
     purple: {
         0: '#e4dadd',

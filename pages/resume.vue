@@ -18,7 +18,7 @@
                 </h3>
 
                 <!-- Main details in resume -->
-                <div class="flex flex-col md:flex-row p-8">
+                <div class="flex flex-col flex-col-reverse md:flex-row p-8">
                     <!-- Left column -->
                     <div class="w-full md:max-w-[65%] md:mr-4">
                         <!-- Experience section -->
@@ -206,6 +206,36 @@
                                 />
                                 <span class="text-lg">SKILLS</span>
                             </h3>
+                            <Progress
+                                class="mb-2"
+                                label="JavaScript"
+                                :value="80"
+                                :show-progress="true"
+                            />
+                            <Progress
+                                class="mb-2"
+                                label="CSS"
+                                :value="95"
+                                :show-progress="true"
+                            />
+                            <Progress
+                                class="mb-2"
+                                label="HTML"
+                                :value="100"
+                                :show-progress="true"
+                            />
+                            <Progress
+                                class="mb-2"
+                                label="VUE"
+                                :value="90"
+                                :show-progress="true"
+                            />
+                            <Progress
+                                class="mb-2"
+                                label="Typescript"
+                                :value="75"
+                                :show-progress="true"
+                            />
                         </section>
                         <!-- TOOLS -->
                         <section class="flex flex-col relative mb-6">

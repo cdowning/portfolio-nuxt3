@@ -4,12 +4,56 @@ export default defineNuxtConfig({
 
     pages: true,
 
+    ssr: false,
+
     devServer: {
         port: 3200,
     },
 
     typescript: {
         shim: false,
+    },
+
+    app: {
+        head: {
+            title: 'Caitlin Hawley - Frontend Developer',
+            meta: [
+                { charset: 'utf-8' },
+                {
+                    name: 'viewport',
+                    content:
+                        'width=device-width, initial-scale=1, viewport-fit=cover',
+                },
+                {
+                    name: 'og:title',
+                    content: 'Caitlin Hawley',
+                },
+                {
+                    name: 'og:site_name',
+                    content: 'Caitlin Hawley - Frontend Developer',
+                },
+                {
+                    name: 'og:url',
+                    content: 'http://www.caitlinhawley.com',
+                },
+                {
+                    name: 'og:description',
+                    content: 'Frontend Developer with a passion for design',
+                },
+                {
+                    name: 'og:type',
+                    content: 'website',
+                },
+                {
+                    name: 'og:image',
+                    content:
+                        'http://nuxt.caitlinhawley.com/computer-bg-square.jpg',
+                },
+                { hid: 'description', name: 'description', content: '' },
+                { name: 'format-detection', content: 'telephone=no' },
+            ],
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        },
     },
 
     css: [

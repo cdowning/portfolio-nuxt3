@@ -4,6 +4,8 @@ import { themes } from '@storybook/theming';
 
 import '../assets/scss/tailwind.scss'; // replace with the name of your tailwind css file
 
+console.log(themes);
+
 const preview: Preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,9 +15,9 @@ const preview: Preview = {
                 date: /Date$/,
             },
         },
-        docs: {
-            // theme: themes.dark,
-        },
+        // docs: {
+        //     theme: themes.light,
+        // },
         darkMode: {
             current: 'light',
             classTarget: 'html',

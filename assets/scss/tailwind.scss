@@ -32,7 +32,13 @@ $cream-light: rgba($color-cream-30, 0.6);
     --card-border-secondary: #{$color-blush-10};
     --bg-overlay: rgba(253, 251, 249, 0.7);
     --text-navigation: #{$color-cream-70};
-    // --text-navigation: rgb(148, 142, 136);
+    --progress-bg: #{$color-gray-00};
+    --progress-bar-bg-default: #{$color-teal-30};
+    --progress-bar-bg-success: #{$color-green-30};
+    --progress-bar-bg-info: #{$color-blue-50};
+    --progress-bar-bg-warning: #{$color-yellow-40};
+    --progress-bar-bg-error: #{$color-rose-40};
+    --progress-bar-text: #{$color-cream-00};
 }
 
 .dark-mode {
@@ -55,4 +61,11 @@ $cream-light: rgba($color-cream-30, 0.6);
     --card-border-secondary: #{$color-blush-10};
     --bg-overlay: rgba(52, 50, 48, 0.7);
     --text-navigation: #{$color-cream-10};
+    --progress-bg: #{$color-gray-50};
+    --progress-bar-bg-default: #{$color-teal-30};
+    --progress-bar-bg-success: #{$color-green-10};
+    --progress-bar-bg-info: #{$color-blue-20};
+    --progress-bar-bg-warning: #{$color-yellow-10};
+    --progress-bar-bg-error: #{$color-blush-20};
+    --progress-bar-text: #{$color-cream-90};
 }

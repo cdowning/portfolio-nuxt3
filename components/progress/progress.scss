@@ -1,0 +1,40 @@
+@import '~/assets/scss/variables';
+
+// progress container
+.progress-container {
+    .label {
+        color: var(--text-primary);
+    }
+
+    .progress {
+        background-color: var(--progress-bg);
+        width: 100%;
+        height: 2rem; // TODO: should we customize this with a prop?
+        border: 1px solid $color-gray-20;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .progress-bar {
+            // default color
+            background-color: var(--progress-bar-bg-default);
+            color: var(--progress-bar-text);
+            height: 100%;
+
+            &.progress-success {
+                background-color: var(--progress-bar-bg-success);
+            }
+
+            &.progress-info {
+                background-color: var(--progress-bar-bg-info);
+            }
+
+            &.progress-warning {
+                background-color: var(--progress-bar-bg-warning);
+            }
+
+            &.progress-error {
+                background-color: var(--progress-bar-bg-error);
+            }
+        }
+    }
+}
