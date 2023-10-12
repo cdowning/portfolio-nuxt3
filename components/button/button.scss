@@ -34,7 +34,7 @@ Button Styles
     }
 
     // Set icon color to text color of button
-    .icon {
+    :deep(.icon) {
         color: currentColor;
     }
 

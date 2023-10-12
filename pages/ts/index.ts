@@ -1,5 +1,7 @@
 export default defineComponent({
     setup() {
+        const router = useRouter();
+
         // We only need value from the color mode object
         const $colorMode = useColorMode();
 
@@ -65,6 +67,9 @@ export default defineComponent({
         });
 
         // Methods
+        const goToResume = () => {
+            router.push(`/resume`);
+        };
         const onUpdateTheme = () => {
             const color = $colorMode.value === 'dark' ? 'light' : 'dark';
             $colorMode.value = color;
@@ -106,6 +111,7 @@ export default defineComponent({
             onUpdateTheme,
             onMobileMenu,
             scrollTo,
+            goToResume,
         };
     },
 });

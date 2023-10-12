@@ -236,6 +236,12 @@
                                 :value="75"
                                 :show-progress="true"
                             />
+                            <Progress
+                                class="mb-2"
+                                label="Jest"
+                                :value="40"
+                                :show-progress="true"
+                            />
                         </section>
                         <!-- TOOLS -->
                         <section class="flex flex-col relative mb-6">

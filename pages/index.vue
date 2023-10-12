@@ -111,7 +111,7 @@
                     Institute of Tennessee &mdash; Nashville. I am currrently
                     employed at Quore in Franklin, TN.
                 </p>
-                <Button>
+                <Button @click="goToResume">
                     Resume
                     <Icon icon="pdf" class="pl-1" />
                 </Button>
@@ -131,10 +131,10 @@
                     but <span class="highlight tailwind">Tailwind</span> is the
                     one I love the most.
                 </p>
-                <Button class="mb-2">
+                <!-- <Button class="mb-8">
                     View Design System
                     <Icon icon="storybook" class="pl-1" />
-                </Button>
+                </Button> -->
 
                 <h3 class="text-lg">Skill Roadmap</h3>
                 <p>
@@ -284,10 +284,6 @@
                     If you would like to get in touch with me, feel free to
                     shoot me an email or text.
                 </p>
-                <Button>
-                    Resume
-                    <Icon icon="pdf" class="pl-1" />
-                </Button>
             </div>
         </section>
         <footer class="flex bg-cream-50 text-cream-10">
