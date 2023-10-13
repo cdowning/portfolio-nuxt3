@@ -16,6 +16,9 @@ export default defineNuxtConfig({
 
     app: {
         head: {
+            htmlAttrs: {
+                lang: 'en', // set to english
+            },
             title: 'Caitlin Hawley - Frontend Developer',
             meta: [
                 { charset: 'utf-8' },
@@ -53,7 +56,12 @@ export default defineNuxtConfig({
                     content:
                         'http://nuxt.caitlinhawley.com/computer-bg-square.jpg',
                 },
-                { hid: 'description', name: 'description', content: '' },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content:
+                        "Hi, I'm Caitlin. I am a frontend web developer with a passion for design.",
+                },
                 { name: 'format-detection', content: 'telephone=no' },
             ],
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

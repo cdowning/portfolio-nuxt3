@@ -294,12 +294,17 @@
         <footer class="flex bg-cream-50 text-cream-10">
             <div class="flex items-center container mx-auto py-8 w-5/6">
                 <div class="social-icons grow">
-                    <a href="https://github.com/cdowning" target="_blank">
+                    <a
+                        href="https://github.com/cdowning"
+                        target="_blank"
+                        title="Github - Cailtin Hawley"
+                    >
                         <Icon icon="github" size="lg" color="cream-10" />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/caitlindowning/"
                         target="_blank"
+                        title="Caitlin Hawley - Linkedin"
                     >
                         <Icon
                             icon="linkedin-circle"
@@ -307,12 +312,17 @@
                             color="cream-10"
                         />
                     </a>
-                    <a href="https://codepen.io/cdowning" target="_blank">
+                    <a
+                        href="https://codepen.io/cdowning"
+                        target="_blank"
+                        title="Codepen"
+                    >
                         <Icon icon="codepen" size="lg" color="cream-10" />
                     </a>
                     <a
                         href="https://twitter.com/caitlinjhawley"
                         target="_blank"
+                        title="Caitlin Hawley on Twitter"
                     >
                         <Icon icon="twitter" size="lg" color="cream-10" />
                     </a>

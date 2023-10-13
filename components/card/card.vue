@@ -11,7 +11,7 @@
         >
             <figure v-if="hasImageSlot" class="card-image">
                 <slot name="image" v-bind="{ source, image }">
-                    <img :src="imagePath" />
+                    <img :src="imagePath" :alt="header" />
                 </slot>
             </figure>
             <figure v-else class="card-image card-image-placeholder">
