@@ -1,4 +1,6 @@
-import SvgSprite from '@/assets/sprite/gen/icon-sprite.svg';
+// Generated from https://svgsprit.es/
+import SvgSprite from '@/assets/sprite/gen/sprite.svg';
+// import SvgSprite from '@/assets/sprite/gen/icon-sprite.svg';
 
 export const TEXT_CLASS_PREFIX = 'text-';
 
@@ -38,7 +40,7 @@ export default defineComponent({
         const hoverState = ref(false);
 
         const iconPath = computed<string>(() => {
-            return `${SvgSprite}#i-${props.icon}`;
+            return `${SvgSprite}#${props.icon}`;
         });
 
         // We might need this

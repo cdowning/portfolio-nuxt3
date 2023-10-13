@@ -11,7 +11,7 @@
                     icon="menu"
                     color="white"
                     class="menu-icon cursor-pointer z-10 md:hidden"
-                    @click="onMobileMenu"
+                    @click="toggleMobileMenu"
                 />
                 <!-- Desktop/tablet nav -->
                 <Navigation
@@ -52,23 +52,23 @@
                         <Icon
                             icon="close"
                             class="close-icon cursor-pointer z-10 md:hidden"
-                            @click="onMobileMenu"
+                            @click="toggleMobileMenu"
                         />
-                        <a class="my-3">
+                        <a class="my-3" @click="scrollTo('about', true)">
                             <Icon class="mx-2" icon="female" />
                             About
                         </a>
-                        <a class="my-3">
+                        <a class="my-3" @click="scrollTo('experience', true)">
                             <Icon class="mx-2" icon="briefcase" />
                             Experience
                         </a>
-                        <a class="my-3">
+                        <a class="my-3" @click="scrollTo('contact', true)">
                             <Icon class="mx-2" icon="envelope" />
                             Contact
                         </a>
                         <div
                             class="color-mode flex cursor-pointer py-3"
-                            @click="onUpdateTheme"
+                            @click="onUpdateTheme(true)"
                         >
                             <Icon
                                 class="theme-icon cursor-pointer pr-2"
@@ -102,9 +102,9 @@
                 </p>
                 <p>
                     I really appreciate a good design that will leave the user
-                    with a great experience. I care a lot about the user's
-                    experience - there is nothing more frustrating than an
-                    application or website that is confusing.
+                    with a great experience. I take a lot of pride in my work.
+                    It is important the user has a positive experience on any
+                    project I work on.
                 </p>
                 <p>
                     I have my BFA in Interactive Media & Web Design from The Art
@@ -131,10 +131,14 @@
                     but <span class="highlight tailwind">Tailwind</span> is the
                     one I love the most.
                 </p>
-                <!-- <Button class="mb-8">
+                <a
+                    class="design-system text-primary mb-8"
+                    href="https://storybook.caitlinhawley.com/"
+                    target="_blank"
+                >
                     View Design System
-                    <Icon icon="storybook" class="pl-1" />
-                </Button> -->
+                    <Icon icon="caret-right" class="pl-1" />
+                </a>
 
                 <h3 class="text-lg">Skill Roadmap</h3>
                 <p>
@@ -286,13 +290,32 @@
                 </p>
             </div>
         </section>
+        <!-- Add this to the layout portion -->
         <footer class="flex bg-cream-50 text-cream-10">
             <div class="flex items-center container mx-auto py-8 w-5/6">
                 <div class="social-icons grow">
-                    <Icon icon="github" size="lg" color="cream-10" />
-                    <Icon icon="linkedin-circle" size="lg" color="cream-10" />
-                    <Icon icon="codepen" size="lg" color="cream-10" />
-                    <Icon icon="twitter" size="lg" color="cream-10" />
+                    <a href="https://github.com/cdowning" target="_blank">
+                        <Icon icon="github" size="lg" color="cream-10" />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/caitlindowning/"
+                        target="_blank"
+                    >
+                        <Icon
+                            icon="linkedin-circle"
+                            size="lg"
+                            color="cream-10"
+                        />
+                    </a>
+                    <a href="https://codepen.io/cdowning" target="_blank">
+                        <Icon icon="codepen" size="lg" color="cream-10" />
+                    </a>
+                    <a
+                        href="https://twitter.com/caitlinjhawley"
+                        target="_blank"
+                    >
+                        <Icon icon="twitter" size="lg" color="cream-10" />
+                    </a>
                 </div>
 
                 <span>
@@ -304,4 +327,4 @@
 </template>
 
 <script lang="ts" src="./ts/index.ts"></script>
-<!--<style lang="scss" src="./scss/prototype.scss" scoped></style>-->
+<style lang="scss" src="./scss/index.scss" scoped></style>

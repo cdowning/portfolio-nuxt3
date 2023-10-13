@@ -170,7 +170,7 @@
                             >
                                 <Icon
                                     class="relative mx-2"
-                                    icon="briefcase"
+                                    icon="graduation-cap"
                                     size="lg"
                                 />
                                 <span class="text-lg">EDUCATION</span>
@@ -201,7 +201,7 @@
                                 <!-- TODO: ADD GEAR ICON -->
                                 <Icon
                                     class="relative bg-cream-0 mx-2"
-                                    icon="briefcase"
+                                    icon="gear"
                                     size="lg"
                                 />
                                 <span class="text-lg">SKILLS</span>
@@ -312,20 +312,18 @@
                             </ul>
                         </section>
                         <!-- CONNECT -->
-                        <section class="flex flex-col relative mb-6">
-                            <!-- Experience Header -->
+                        <!-- <section class="flex flex-col relative mb-6">
                             <h3
                                 class="mb-4 flex flex-col items-center md:flex-row"
                             >
-                                <!-- TODO: ADD GEAR ICON -->
                                 <Icon
                                     class="relative bg-cream-0 mx-2"
-                                    icon="briefcase"
+                                    icon="envelope"
                                     size="lg"
                                 />
                                 <span class="text-lg">CONNECT</span>
                             </h3>
-                        </section>
+                        </section> -->
                     </div>
                 </div>
             </div>

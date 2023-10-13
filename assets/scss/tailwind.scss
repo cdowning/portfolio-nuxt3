@@ -35,10 +35,11 @@ $cream-light: rgba($color-cream-30, 0.6);
     --progress-bg: #{$color-gray-00};
     --progress-bar-bg-default: #{$color-teal-30};
     --progress-bar-bg-success: #{$color-green-30};
-    --progress-bar-bg-info: #{$color-blue-50};
+    --progress-bar-bg-info: #{$color-blue-40};
     --progress-bar-bg-warning: #{$color-yellow-40};
     --progress-bar-bg-error: #{$color-rose-40};
     --progress-bar-text: #{$color-cream-00};
+    --highlight-text: #{$color-blush-20};
 }
 
 .dark-mode {
@@ -68,4 +69,5 @@ $cream-light: rgba($color-cream-30, 0.6);
     --progress-bar-bg-warning: #{$color-yellow-10};
     --progress-bar-bg-error: #{$color-blush-20};
     --progress-bar-text: #{$color-cream-90};
+    --highlight-text: #{$color-teal-50};
 }

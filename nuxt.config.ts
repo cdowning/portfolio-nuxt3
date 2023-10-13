@@ -20,6 +20,10 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 {
+                    name: 'google-site-verification',
+                    content: 'NUI54tC2OJpBCNryTbHMv7ZBIjSz6rWZLM2V8AKIFRA',
+                },
+                {
                     name: 'viewport',
                     content:
                         'width=device-width, initial-scale=1, viewport-fit=cover',
@@ -65,6 +69,9 @@ export default defineNuxtConfig({
     components: [{ path: '~/components', extensions: ['vue'] }],
 
     modules: [
+        // https://nuxt.com/modules/gtag
+        'nuxt-gtag',
+
         // https://tailwindcss.nuxtjs.org/
         '@nuxtjs/tailwindcss',
 
@@ -74,6 +81,10 @@ export default defineNuxtConfig({
         // https://storybook.nuxtjs.org/
         // '@nuxtjs/storybook',
     ],
+
+    gtag: {
+        id: 'G-CRTHWFY5XP',
+    },
 
     tailwindcss: {
         // Maybe move the util sass files into a /utils
@@ -94,4 +105,11 @@ export default defineNuxtConfig({
     //         autoprefixer: {},
     //     },
     // },
+
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: ['/sitemap.xml', '/robots.txt'],
+        },
+    },
 });

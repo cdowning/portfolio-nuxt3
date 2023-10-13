@@ -8,7 +8,9 @@
                 <div
                     class="hero-image flex flex-col justify-end text-cream-0 px-8 pb-5"
                 >
-                    <h1 class="text-3xl uppercase">Caitlin Hawley</h1>
+                    <h1 class="text-2xl md:text-3xl uppercase">
+                        <nuxt-link to="/">Caitlin Hawley</nuxt-link>
+                    </h1>
                     <h2 class="text-xl">Frontend Developer</h2>
                 </div>
             </slot>

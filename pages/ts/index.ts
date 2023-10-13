@@ -70,17 +70,25 @@ export default defineComponent({
         const goToResume = () => {
             router.push(`/resume`);
         };
-        const onUpdateTheme = () => {
+        const onUpdateTheme = (isMobile: boolean) => {
             const color = $colorMode.value === 'dark' ? 'light' : 'dark';
             $colorMode.value = color;
+
+            if (isMobile) {
+                toggleMobileMenu();
+            }
         };
         // Opens the mobile menu
-        const onMobileMenu = () => {
+        const toggleMobileMenu = () => {
             mobileMenu.value = !mobileMenu.value;
             icon.value = icon.value === 'menu' ? 'close' : 'menu';
         };
         // scroll to section
-        const scrollTo = (section: string) => {
+        const scrollTo = (section: string, isMobile?: boolean) => {
+            if (isMobile) {
+                toggleMobileMenu();
+            }
+
             const selected = sections[section]?.value;
 
             const offset = selected.offsetTop;
@@ -109,7 +117,7 @@ export default defineComponent({
 
             // Methods
             onUpdateTheme,
-            onMobileMenu,
+            toggleMobileMenu,
             scrollTo,
             goToResume,
         };
