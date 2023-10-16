@@ -1,5 +1,6 @@
 <template>
     <button
+        v-if="!useLink"
         :class="[
             'btn inline-flex items-center justify-center',
             'btn-' + variant,
@@ -9,6 +10,17 @@
     >
         <slot />
     </button>
+    <nuxt-link
+        v-else
+        :class="[
+            'btn inline-flex items-center justify-center',
+            'btn-' + variant,
+            ...buttonClasses,
+        ]"
+        :disabled="disabled"
+    >
+        <slot />
+    </nuxt-link>
 </template>
 
 <script lang="ts" src="./button.ts"></script>

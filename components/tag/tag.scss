@@ -1,0 +1,34 @@
+.tag {
+    color: var(--tag-text);
+    // padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+
+    // Set icon color to text color of button
+    :deep(.icon) {
+        color: currentColor;
+    }
+
+    // Variants
+    &.tag-primary {
+        background-color: var(--tag-bg-primary);
+    }
+    &.tag-secondary {
+        background-color: var(--tag-bg-secondary);
+    }
+    &.tag-tertiary {
+        background-color: var(--tag-bg-tertiary);
+    }
+
+    div.close {
+        border-radius: 50%;
+        padding: 0.25rem;
+        margin-left: 0.5rem;
+
+        &:hover {
+            background-color: var(--tag-close-hover);
+        }
+    }
+}

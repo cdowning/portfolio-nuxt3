@@ -67,9 +67,6 @@ export default defineComponent({
         });
 
         // Methods
-        const goToResume = () => {
-            router.push(`/resume`);
-        };
         const onUpdateTheme = (isMobile: boolean) => {
             const color = $colorMode.value === 'dark' ? 'light' : 'dark';
             $colorMode.value = color;
@@ -119,7 +116,6 @@ export default defineComponent({
             onUpdateTheme,
             toggleMobileMenu,
             scrollTo,
-            goToResume,
         };
     },
 });

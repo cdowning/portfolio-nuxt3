@@ -33,7 +33,7 @@
 
                 <div class="color-mode hidden md:block">
                     <Icon
-                        class="theme-icon cursor-pointer"
+                        class="cursor-pointer"
                         :icon="colorIcon"
                         :width="24"
                         :height="24"
@@ -111,7 +111,8 @@
                     Institute of Tennessee &mdash; Nashville. I am currrently
                     employed at Quore in Franklin, TN.
                 </p>
-                <Button @click="goToResume">
+
+                <Button :use-link="true" to="/resume">
                     Resume
                     <Icon icon="pdf" class="pl-1" />
                 </Button>
@@ -131,14 +132,15 @@
                     but <span class="highlight tailwind">Tailwind</span> is the
                     one I love the most.
                 </p>
-                <a
-                    class="design-system text-primary mb-8"
-                    href="https://storybook.caitlinhawley.com/"
-                    target="_blank"
+
+                <Button
+                    class="mb-10"
+                    :use-link="true"
+                    to="https://storybook.caitlinhawley.com/"
                 >
                     View Design System
                     <Icon icon="caret-right" class="pl-1" />
-                </a>
+                </Button>
 
                 <h3 class="text-lg">Skill Roadmap</h3>
                 <p>

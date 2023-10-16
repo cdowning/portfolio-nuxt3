@@ -22,6 +22,7 @@ export default defineNuxtConfig({
             title: 'Caitlin Hawley - Frontend Developer',
             meta: [
                 { charset: 'utf-8' },
+                { name: 'robots', content: 'index,follow' },
                 {
                     name: 'google-site-verification',
                     content: 'NUI54tC2OJpBCNryTbHMv7ZBIjSz6rWZLM2V8AKIFRA',

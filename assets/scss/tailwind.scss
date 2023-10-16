@@ -40,6 +40,11 @@ $cream-light: rgba($color-cream-30, 0.6);
     --progress-bar-bg-error: #{$color-rose-40};
     --progress-bar-text: #{$color-cream-00};
     --highlight-text: #{$color-blush-20};
+    --tag-bg-primary: #{$color-blush-60};
+    --tag-bg-secondary: #{$color-teal-40};
+    --tag-bg-tertiary: #{$color-green-30};
+    --tag-text: #{$color-cream-00};
+    --tag-close-hover: rgba(255, 255, 255, 0.2);
 }
 
 .dark-mode {
@@ -70,4 +75,9 @@ $cream-light: rgba($color-cream-30, 0.6);
     --progress-bar-bg-error: #{$color-blush-20};
     --progress-bar-text: #{$color-cream-90};
     --highlight-text: #{$color-teal-50};
+    --tag-bg-primary: #{$color-blush-20};
+    --tag-bg-secondary: #{$color-teal-20};
+    --tag-bg-tertiary: #{$color-green-10};
+    --tag-text: #{$color-cream-80};
+    --tag-close-hover: rgba(0, 0, 0, 0.05);
 }

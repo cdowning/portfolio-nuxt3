@@ -1,7 +1,7 @@
 /** Buttons are used for any CTA */
 const Button = defineComponent({
     name: 'Button',
-    // inheritAttrs: true,
+    inheritAttrs: true,
     props: {
         /** Determines the color of the button */
         variant: {
@@ -32,6 +32,10 @@ const Button = defineComponent({
         isRounded: {
             type: Boolean,
             default: true,
+        },
+        useLink: {
+            type: Boolean,
+            default: false,
         },
     },
     setup(props, context) {
