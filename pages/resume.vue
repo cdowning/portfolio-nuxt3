@@ -10,15 +10,20 @@
                 <!-- <div class="background flex-none"></div> -->
             </template>
 
-            <div class="resume-content">
+            <div class="resume-content px-8 py-2">
                 <h3
                     class="font-worksans w-full py-8 px-8 text-lg md:text-center"
                 >
                     “Frontend developer with a passion for user experience.”
                 </h3>
+                <Tabs :is-full-width="false" direction="vertical">
+                    <Tab direction="vertical">Item one</Tab>
+                    <Tab :selected="true">Item two!!!!</Tab>
+                    <Tab>Item three</Tab>
+                </Tabs>
 
                 <!-- Main details in resume -->
-                <div class="flex flex-col flex-col-reverse md:flex-row p-8">
+                <div class="flex flex-col flex-col-reverse md:flex-row">
                     <!-- Left column -->
                     <div class="w-full md:max-w-[65%] md:mr-4">
                         <!-- Experience section -->

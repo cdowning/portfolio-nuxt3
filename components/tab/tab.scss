@@ -12,19 +12,40 @@
     }
 
     .tab-underline {
-        width: 100%;
+        width: 0px;
         height: 2px;
+        background-color: transparent;
+
+        transition: transform ease var(--animation-time, 200ms),
+            opacity ease 0ms 200ms;
     }
 
-    &.tab-hover {
+    &:hover {
         .tab-underline {
+            width: 100%;
+            transform: translateX(5%);
+            // transform: scaleX(1.05);
+
             background-color: var(--underline-color, currentColor);
-            transition: transform ease var(--animation-time, 200ms),
-                opacity ease 0ms 200ms;
-            transform: translateX(10%);
         }
     }
 
     &.tab-selected {
+        color: $color-teal-40;
+        background-color: $color-gray-00;
     }
+
+    // Vertical Tabs
+    // &.tab-vertical {
+    //     @apply flex-row-reverse;
+
+    //     .tab-underline {
+    //         height: auto;
+    //         width: 0.25rem;
+    //     }
+
+    //     .tab-text {
+    //         flex-grow: 1;
+    //     }
+    // }
 }

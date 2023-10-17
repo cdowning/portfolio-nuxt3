@@ -45,7 +45,6 @@ const Tabs = defineComponent({
                 'tabs mb-4',
                 alignmentClass.value,
                 props.isFullWidth ? 'flex' : 'inline-flex',
-                // props.direction === 'vertical' ? 'flex-col' : '',
                 { 'flex-col': props.direction === 'vertical' },
             ];
         });

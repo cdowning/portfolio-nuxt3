@@ -1,5 +1,6 @@
 /** Tab are used inside of the tab component, but they don't have to be */
-// TODO: Would love to animate tab underline
+import { props as tabsProps } from '~/components/tabs/tabs.vue';
+console.log(tabsProps);
 
 export const props = {
     url: {
@@ -7,18 +8,31 @@ export const props = {
         default: '',
     },
     selected: {
-        type: String,
-        default: '',
+        type: Boolean,
+        default: false,
     },
+    ...tabsProps.direction,
 };
 
 const Tab = defineComponent({
     name: 'Tab',
+    inheritAttrs: true,
     props: props,
     setup(props, context) {
-        const hover = ref(false);
+        console.log(context.attrs);
 
-        return { hover };
+        // Set the tab container classes in a computed property to keep it cleaner
+        const classes = computed<object[] | string[] | {}>(() => {
+            return [
+                'tab',
+                { 'tab-selected': props.selected },
+                { 'tab-vertical': context.attrs.direction === 'vertical' },
+            ];
+        });
+
+        return {
+            classes,
+        };
     },
 });
 
