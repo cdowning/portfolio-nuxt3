@@ -1,6 +1,5 @@
 .tag {
     color: var(--tag-text);
-    // padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
     width: fit-content;
     margin-bottom: 0.5rem;
@@ -20,6 +19,16 @@
     }
     &.tag-tertiary {
         background-color: var(--tag-bg-tertiary);
+    }
+
+    // Sizes
+    &.tag-sm {
+        padding: 4px 8px;
+        @apply text-sm;
+    }
+    &.tag-md {
+        padding: 4px 8px;
+        @apply py-2 pl-3;
     }
 
     div.close {

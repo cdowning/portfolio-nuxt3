@@ -18,7 +18,7 @@ const meta: Meta<typeof Tag> = {
             control: { type: 'select' },
         },
         size: {
-            options: ['sm', 'md', 'lg', 'xl'],
+            options: ['sm', 'md'],
             control: { type: 'select' },
         },
         default: {

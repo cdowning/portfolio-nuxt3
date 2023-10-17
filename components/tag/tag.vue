@@ -1,8 +1,9 @@
 <template>
     <div
         :class="[
-            'tag inline-flex items-center py-2 pl-3',
+            'tag inline-flex items-center',
             'tag-' + variant,
+            'tag-' + size,
             isDismissible ? 'pr-2' : 'pr-3',
             { hovered: hover },
         ]"
