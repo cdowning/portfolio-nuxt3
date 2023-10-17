@@ -39,7 +39,7 @@ const Button = defineComponent({
         },
     },
     setup(props, context) {
-        const buttonClasses = computed(function () {
+        const buttonClasses = computed(() => {
             return [
                 'btn-' + props.size,
                 { 'has-icon': !!context.slots.icon },
