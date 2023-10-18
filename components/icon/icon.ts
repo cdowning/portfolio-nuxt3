@@ -1,4 +1,6 @@
 // Generated from https://svgsprit.es/
+/** Currently using https://svgsprit.es/ to generate the svg sprite */
+
 import SvgSprite from '@/assets/sprite/gen/sprite.svg';
 // import SvgSprite from '@/assets/sprite/gen/icon-sprite.svg';
 
