@@ -26,10 +26,13 @@ export const props = {
 // Passing props to nested components: https://vuejs.org/guide/components/provide-inject.html#prop-drilling
 // https://vuejs.org/api/composition-api-dependency-injection.html#inject
 // Provide & inject: https://zerotomastery.io/blog/tab-component-design-with-vue/
+// https://learnvue.co/articles/vue-reusable-tabs-component
 const Tabs = defineComponent({
     name: 'Tabs',
     props: props,
     setup(props) {
+        const selectedIndex = ref(0);
+
         // Need special styles for vertical tabs - provide value to tab.ts
         provide('isHorizontal', props.isHorizontal);
 
@@ -56,6 +59,10 @@ const Tabs = defineComponent({
         });
 
         return {
+            // refs
+            selectedIndex,
+
+            // computed
             alignmentClass,
             classes,
         };
