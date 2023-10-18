@@ -21,12 +21,23 @@ export const props = {
         type: String,
         default: '',
     },
+    horizontal: {
+        type: Boolean,
+        default: true,
+    },
 };
 
+// Passing props to nested components: https://vuejs.org/guide/components/provide-inject.html#prop-drilling
 const Tabs = defineComponent({
     name: 'Tabs',
     props: props,
     setup(props, context) {
+        provide('horizontal', props.horizontal);
+        provide('direction', props.direction);
+
+        const activeTabHash = ref('');
+        const tabs = ref([]);
+
         // Should the tabs be aligned to the left, center or right
         const alignmentClass = computed<string>(() => {
             switch (props.alignment) {
@@ -50,6 +61,9 @@ const Tabs = defineComponent({
         });
 
         return {
+            activeTabHash,
+            tabs,
+
             alignmentClass,
             classes,
         };

@@ -4,7 +4,5 @@ definePageMeta({
 });
 
 export default defineComponent({
-    setup() {
-        // const $colorMode = useColorMode();
-    },
+    setup() {},
 });

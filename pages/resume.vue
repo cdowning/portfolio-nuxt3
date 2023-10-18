@@ -16,8 +16,8 @@
                 >
                     “Frontend developer with a passion for user experience.”
                 </h3>
-                <Tabs :is-full-width="false" direction="vertical">
-                    <Tab direction="vertical">Item one</Tab>
+                <Tabs ref="tabs" :is-full-width="false" direction="vertical">
+                    <Tab>Item one </Tab>
                     <Tab :selected="true">Item two!!!!</Tab>
                     <Tab>Item three</Tab>
                 </Tabs>
