@@ -36,16 +36,16 @@
     }
 
     // Vertical Tabs
-    // &.tab-vertical {
-    //     @apply flex-row-reverse;
+    &.tab-vertical {
+        @apply flex flex-row-reverse;
 
-    //     .tab-underline {
-    //         height: auto;
-    //         width: 0.25rem;
-    //     }
+        .tab-underline {
+            height: auto;
+            width: 0.25rem;
+        }
 
-    //     .tab-text {
-    //         flex-grow: 1;
-    //     }
-    // }
+        .tab-text {
+            flex-grow: 1;
+        }
+    }
 }

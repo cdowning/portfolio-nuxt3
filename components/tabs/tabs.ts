@@ -3,9 +3,9 @@
 export const props = {
     /** Determines the color of the button */
     // Horizontal or vertical
-    direction: {
-        type: String,
-        default: 'horizontal',
+    isHorizontal: {
+        type: Boolean,
+        default: true,
     },
     // left, center, right
     alignment: {
@@ -21,22 +21,17 @@ export const props = {
         type: String,
         default: '',
     },
-    horizontal: {
-        type: Boolean,
-        default: true,
-    },
 };
 
 // Passing props to nested components: https://vuejs.org/guide/components/provide-inject.html#prop-drilling
+// https://vuejs.org/api/composition-api-dependency-injection.html#inject
+// Provide & inject: https://zerotomastery.io/blog/tab-component-design-with-vue/
 const Tabs = defineComponent({
     name: 'Tabs',
     props: props,
-    setup(props, context) {
-        provide('horizontal', props.horizontal);
-        provide('direction', props.direction);
-
-        const activeTabHash = ref('');
-        const tabs = ref([]);
+    setup(props) {
+        // Need special styles for vertical tabs - provide value to tab.ts
+        provide('isHorizontal', props.isHorizontal);
 
         // Should the tabs be aligned to the left, center or right
         const alignmentClass = computed<string>(() => {
@@ -56,14 +51,11 @@ const Tabs = defineComponent({
                 'tabs mb-4',
                 alignmentClass.value,
                 props.isFullWidth ? 'flex' : 'inline-flex',
-                { 'flex-col': props.direction === 'vertical' },
+                { 'flex-col': !props.isHorizontal },
             ];
         });
 
         return {
-            activeTabHash,
-            tabs,
-
             alignmentClass,
             classes,
         };
