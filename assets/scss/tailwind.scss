@@ -45,6 +45,11 @@ $cream-light: rgba($color-cream-30, 0.6);
     --tag-bg-tertiary: #{$color-green-30};
     --tag-text: #{$color-cream-00};
     --tag-close-hover: rgba(255, 255, 255, 0.2);
+    --input-bg: #{$color-cream-00};
+    --input-border: #{$color-cream-60};
+    --input-border-focus: #{$color-green-20};
+    --input-bg-disabled: rgba(173, 166, 158, 0.2);
+    --input-placeholder: #{$color-gray-20};
 }
 
 .dark-mode {
@@ -80,4 +85,9 @@ $cream-light: rgba($color-cream-30, 0.6);
     --tag-bg-tertiary: #{$color-green-10};
     --tag-text: #{$color-cream-80};
     --tag-close-hover: rgba(0, 0, 0, 0.05);
+    --input-bg: #{$color-gray-50};
+    --input-border: #{$color-cream-10};
+    --input-border-focus: #{$color-blue-20};
+    --input-bg-disabled: rgbargba(148, 142, 136, 0.7);
+    --input-placeholder: #{$color-gray-20};
 }

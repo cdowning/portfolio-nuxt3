@@ -79,7 +79,13 @@ export default defineNuxtConfig({
         'assets/scss/main.scss',
     ],
 
-    components: [{ path: '~/components', extensions: ['vue'] }],
+    components: [
+        {
+            path: '~/components',
+            // prefix: 'C',
+            extensions: ['vue'],
+        },
+    ],
 
     modules: [
         // https://nuxt.com/modules/gtag
