@@ -4,6 +4,7 @@ const Button = defineComponent({
     inheritAttrs: true,
     props: {
         /** Determines the color of the button */
+        // primary, secondary, tertiary
         variant: {
             type: String,
             default: 'primary',
@@ -33,7 +34,7 @@ const Button = defineComponent({
             type: Boolean,
             default: true,
         },
-        useLink: {
+        useNuxtLink: {
             type: Boolean,
             default: false,
         },

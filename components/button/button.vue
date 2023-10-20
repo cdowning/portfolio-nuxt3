@@ -1,6 +1,6 @@
 <template>
     <button
-        v-if="!useLink"
+        v-if="!useNuxtLink"
         :class="[
             'btn inline-flex items-center justify-center',
             'btn-' + variant,

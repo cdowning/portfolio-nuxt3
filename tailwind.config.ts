@@ -64,6 +64,7 @@ export default {
             textColor: {
                 primary: 'var(--text-primary)',
                 secondary: 'var(--text-secondary)',
+                subtle: 'var(--text-subtle)',
             },
             borderColor: {
                 card: {

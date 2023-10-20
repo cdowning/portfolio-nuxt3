@@ -2,9 +2,10 @@
 
 a {
     text-decoration: underline;
-    color: $color-green-30;
+    color: $color-blush-40;
 }
 
+// TODO: Create a timeline & timeline-event component.
 .event {
     // Applies to both mobile and desktop
     &::before,

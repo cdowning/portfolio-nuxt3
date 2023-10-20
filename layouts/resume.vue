@@ -1,4 +1,5 @@
 <template>
+    <!-- <Meta name="description" content="this is a test" /> -->
     <!-- https://nuxt.com/docs/guide/directory-structure/layouts#overriding-a-layout-on-a-per-page-basis -->
     <!-- <div class="container mx-auto py-10"> -->
     <div>
@@ -20,4 +21,12 @@
     </div>
 </template>
 
+<script setup lang="ts">
+// https://nuxt.com/docs/getting-started/seo-meta#useseometa
+// https://nuxt.com/docs/api/composables/use-seo-meta
+useSeoMeta({
+    title: 'Caitlin Hawley - Interactive Resume',
+    description: 'An interactive visual of my work experience & skill set.',
+});
+</script>
 <style lang="scss" src="./scss/resume.scss" scoped></style>

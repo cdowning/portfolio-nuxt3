@@ -112,9 +112,9 @@
                     employed at Quore in Franklin, TN.
                 </p>
 
-                <Button :use-link="true" to="/resume">
+                <Button :use-nuxt-link="true" to="/resume">
                     Resume
-                    <Icon icon="pdf" class="pl-1" />
+                    <Icon icon="caret-right" class="pl-1" />
                 </Button>
             </div>
             <div
@@ -135,7 +135,7 @@
 
                 <Button
                     class="mb-10"
-                    :use-link="true"
+                    :use-nuxt-link="true"
                     to="https://storybook.caitlinhawley.com/"
                 >
                     View Design System

@@ -37,21 +37,22 @@ const Input = defineComponent({
 
         // global classes
         const classes = computed<object[] | string[] | {}>(() => {
-            console.log(iconAlignment.value);
             return [
-                'input flex items-center mb-6 px-2',
+                'input flex items-center mb-6 px-4',
                 'input-' + props.size,
                 { 'input-focused': !!focused.value },
                 { 'flex-row-reverse': iconAlignment.value === 'left' },
+                { disabled: !!props.isDisabled },
             ];
         });
 
         const inputClasses = computed<object[] | string[] | {}>(() => {
-            return ['input-field px-4'];
+            return ['input-field'];
         });
 
-        const hasIcon = computed(function () {
-            return !!slots.icon;
+        const hasIcon = computed(() => {
+            return !!slots.default?.length;
+            // return !!slots.icon;
         });
 
         const iconAlignment = computed(() => {
@@ -59,8 +60,6 @@ const Input = defineComponent({
             if (!hasIcon.value) {
                 return;
             }
-
-            console.log(props.iconPosition);
 
             return props.iconPosition === 'left' ? 'left' : 'right';
         });

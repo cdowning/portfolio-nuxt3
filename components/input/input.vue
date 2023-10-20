@@ -11,7 +11,7 @@
             @focusin="focused = !focused"
             @focusout="focused = !focused"
         />
-        <slot name="icon" />
+        <slot />
     </div>
 </template>
 

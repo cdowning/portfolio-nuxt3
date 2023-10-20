@@ -1,6 +1,5 @@
-const Label = defineComponent({
+export default defineComponent({
     name: 'Label',
-    inheritAttrs: true,
     // isRequired?, slot for icon/tooltip help
     props: {
         text: {
@@ -19,4 +18,4 @@ const Label = defineComponent({
     setup(props) {},
 });
 
-export default Label;
+// export default CLabel;

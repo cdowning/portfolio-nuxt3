@@ -79,11 +79,12 @@ export default defineNuxtConfig({
         'assets/scss/main.scss',
     ],
 
+    // https://nuxt.com/docs/guide/directory-structure/components#component-names
     components: [
         {
             path: '~/components',
-            // prefix: 'C',
-            extensions: ['vue'],
+            // prefix: 'c',
+            extensions: ['.vue'],
         },
     ],
 
