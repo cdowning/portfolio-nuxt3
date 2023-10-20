@@ -20,21 +20,21 @@ const preview: Preview = {
             current: 'light',
             classTarget: 'html',
             darkClass: 'dark-mode',
-            stylePreview: true,
-            dark: {
-                ...themes.dark,
-                // brandTitle: 'My custom storybook',
-                brandUrl: 'http://caitlinhawley.com',
-                brandImage: 'https://caitlinhawley.com/caitlin-hawley-dark.svg',
-            },
-            // Override the default light theme
-            light: {
-                ...themes.light,
-                // brandTitle: 'My custom storybook',
-                brandUrl: 'http://caitlinhawley.com',
-                brandImage:
-                    'https://caitlinhawley.com/caitlin-hawley-light.svg',
-            },
+            // stylePreview: true,
+            // dark: {
+            //     ...themes.dark,
+            //     // brandTitle: 'My custom storybook',
+            //     brandUrl: 'http://caitlinhawley.com',
+            //     brandImage: 'https://caitlinhawley.com/caitlin-hawley-dark.svg',
+            // },
+            // // Override the default light theme
+            // light: {
+            //     ...themes.light,
+            //     // brandTitle: 'My custom storybook',
+            //     brandUrl: 'http://caitlinhawley.com',
+            //     brandImage:
+            //         'https://caitlinhawley.com/caitlin-hawley-light.svg',
+            // },
         },
         options: {
             storySort: {

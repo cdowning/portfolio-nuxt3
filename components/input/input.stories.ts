@@ -69,6 +69,7 @@ export const Primary: Story = {
         </Input>`,
     }),
     args: {
+        modelValue: '',
         size: 'md',
         type: 'text',
         placeholder: 'Enter text',
@@ -88,7 +89,6 @@ export const Secondary: Story = {
     }),
     args: {
         ...Primary.args,
-        isRounded: false,
         iconPosition: 'right',
         isDisabled: true,
     },
