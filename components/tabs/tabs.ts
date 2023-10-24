@@ -1,35 +1,33 @@
 /** Tabs are used as the container for the tab component */
 
-export const props = {
-    /** Determines the color of the button */
-    // Horizontal or vertical
-    isHorizontal: {
-        type: Boolean,
-        default: true,
-    },
-    // left, center, right
-    alignment: {
-        type: String,
-        default: 'left',
-    },
-    isFullWidth: {
-        type: Boolean,
-        default: false,
-    },
-    // Default, comfortable, compact
-    density: {
-        type: String,
-        default: '',
-    },
-};
-
 // Passing props to nested components: https://vuejs.org/guide/components/provide-inject.html#prop-drilling
 // https://vuejs.org/api/composition-api-dependency-injection.html#inject
 // Provide & inject: https://zerotomastery.io/blog/tab-component-design-with-vue/
 // https://learnvue.co/articles/vue-reusable-tabs-component
 const Tabs = defineComponent({
     name: 'Tabs',
-    props: props,
+    props: {
+        /** Determines the direction of the tabs */
+        // Horizontal or vertical
+        isHorizontal: {
+            type: Boolean,
+            default: true,
+        },
+        // left, center, right
+        alignment: {
+            type: String,
+            default: 'left',
+        },
+        isFullWidth: {
+            type: Boolean,
+            default: false,
+        },
+        // Default, comfortable, compact
+        density: {
+            type: String,
+            default: '',
+        },
+    },
     setup(props) {
         const selectedIndex = ref(0);
 

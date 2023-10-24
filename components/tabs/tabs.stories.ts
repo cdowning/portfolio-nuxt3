@@ -5,30 +5,18 @@ import type { Args, ArgTypes, Meta, StoryObj } from '@storybook/vue3';
 import Tabs from './tabs.vue';
 import Tab from '../tab/tab.vue';
 
+const alignment = ['left', 'center', 'right'];
+
 // Hide argTypes for certain stories: https://storybook.js.org/docs/vue/essentials/controls#conditional-controls
 // Control types: https://storybook.js.org/docs/react/essentials/controls#annotation
 const meta: Meta<typeof Tabs> = {
     title: 'Components/Tabs',
     component: Tabs,
     argTypes: {
-        // radios: { control: 'object', if: { arg: 'radios' } },
-        // id: {
-        //     control: 'text',
-        //     if: { arg: 'id', exists: true },
-        //     // table: { disable: true },
-        // },
-        // name: {
-        //     control: 'text',
-        //     if: { arg: 'name', exists: true },
-        // },
-        // text: {
-        //     control: 'text',
-        //     if: { arg: 'text', exists: true },
-        // },
-        // isStacked: {
-        //     control: 'boolean',
-        //     if: { arg: 'isStacked', exists: true },
-        // },
+        alignment: {
+            options: alignment,
+            control: { type: 'select' },
+        },
     },
     tags: ['autodocs'],
 } satisfies Meta<typeof Tabs>;

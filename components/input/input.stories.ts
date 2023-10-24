@@ -6,6 +6,9 @@ import type { Args, Meta, StoryObj } from '@storybook/vue3';
 import Input from './input.vue';
 import Icon from '../icon/icon.vue';
 
+// import iconList from '../../composables/icon';
+const icons = ['eye', 'eye-off', 'search'];
+
 const typeOptions = [
     'text',
     'password',
@@ -30,6 +33,10 @@ const meta: Meta<typeof Input> = {
         },
         isDisabled: {
             control: { type: 'boolean' },
+        },
+        icon: {
+            options: icons,
+            control: { type: 'select' },
         },
         iconPosition: {
             options: ['right', 'left'],
@@ -86,7 +93,9 @@ export const Secondary: Story = {
         setup() {
             return { args };
         },
-        template: `<Input v-bind="args" />`,
+        template: `<Input v-bind="args">
+           <Icon :icon="args.icon" />
+        </Input>`,
     }),
     args: {
         ...Primary.args,
@@ -105,11 +114,18 @@ export const Password: Story = {
 
             return { inputType, args };
         },
-        template: `<Input v-bind="args" :type="inputType" @update-type="inputType = $event" />`,
+        template: `<Input v-bind="args" :type="inputType" @update-type="inputType = $event">
+            <template v-slot="{ icon, onClick, iconClass }">
+                <Icon
+                    :icon="icon"
+                    @click="onClick"
+                    :class="iconClass"
+                />
+            </template>
+        </Input>`,
     }),
     args: {
-        ...Primary.args,
-        type: 'password',
+        placeholder: 'Enter password',
         icon: 'eye',
         iconPosition: 'right',
         isDisabled: false,

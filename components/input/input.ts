@@ -1,6 +1,11 @@
 export const SHOW_PASSWORD_ICON = 'eye';
 export const HIDE_PASSWORD_ICON = 'eye-off';
 
+enum PasswordIcon {
+    Show = 'eye',
+    Hide = 'eye-off',
+}
+
 const Input = defineComponent({
     name: 'Input',
     inheritAttrs: true,
@@ -33,6 +38,7 @@ const Input = defineComponent({
             type: String,
             default: '',
         },
+        // TODO: figure out how I can pass this through the slot
         iconPosition: {
             type: String,
             default: 'right',
@@ -44,7 +50,6 @@ const Input = defineComponent({
         const currentInput = ref<any>(null);
         const focused = ref(false);
 
-        // reactive input type & icon
         const icon = ref(props.icon);
 
         // global classes
@@ -55,7 +60,7 @@ const Input = defineComponent({
                 { 'input-focused': !!focused.value },
                 {
                     'flex-row-reverse':
-                        props.icon && props.iconPosition === 'left',
+                        hasIcon.value && props.iconPosition === 'left',
                 },
                 { disabled: !!props.isDisabled },
             ];
@@ -65,25 +70,34 @@ const Input = defineComponent({
             return ['input-field pl-2'];
         });
 
-        // Old
-        const hasIcon = computed(() => {
+        // Slot computed properties
+        const hasIcon = computed<boolean>(() => {
             return !!context.slots.default;
         });
 
+        // Methods
+
+        // Click Event for any icon functionality
         const onIconClick = () => {
+            // Is the input type="password"
             const isPassword = props.type === 'password';
+
             const showPassword =
                 props.type === 'text' && icon.value === HIDE_PASSWORD_ICON;
 
             if (isPassword || showPassword) {
-                // Toggle password visibility
-                const type = props.type === 'text' ? 'password' : 'text';
-
-                icon.value =
-                    type === 'text' ? HIDE_PASSWORD_ICON : SHOW_PASSWORD_ICON;
-
-                context.emit('update-type', type);
+                togglePasswordVisibility();
             }
+        };
+
+        // Show password value / Hide password value
+        const togglePasswordVisibility = () => {
+            const type = props.type === 'text' ? 'password' : 'text';
+
+            icon.value =
+                type === 'text' ? PasswordIcon.Hide : PasswordIcon.Show;
+
+            context.emit('update-type', type);
         };
 
         return {
@@ -99,6 +113,7 @@ const Input = defineComponent({
 
             // Methods
             onIconClick,
+            togglePasswordVisibility,
         };
     },
 });

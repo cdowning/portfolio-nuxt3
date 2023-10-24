@@ -10,8 +10,11 @@
             @focusin="focused = !focused"
             @focusout="focused = !focused"
         />
-
-        <Icon v-if="icon" :icon="icon" @click="onIconClick" />
+        <slot
+            :icon="icon"
+            :onClick="onIconClick"
+            icon-class="cursor-pointer"
+        ></slot>
     </div>
 </template>
 
