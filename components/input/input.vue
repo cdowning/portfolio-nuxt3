@@ -1,6 +1,5 @@
 <template>
     <div ref="currentInput" :class="classes">
-        <!-- <slot name="label" /> -->
         <input
             :type="type"
             :id="id"
@@ -11,7 +10,8 @@
             @focusin="focused = !focused"
             @focusout="focused = !focused"
         />
-        <slot />
+
+        <Icon v-if="icon" :icon="icon" @click="onIconClick" />
     </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
-    <label class="label flex items-center" :for="labelFor">
+    <label class="label flex items-center w-full" :for="labelFor">
         <span class="label-text flex-grow"><slot /></span>
 
-        <span v-if="isRequired" class="label-required text-sm">* Required</span>
+        <span v-if="isOptional" class="label-optional text-sm">(Optional)</span>
     </label>
 </template>
 

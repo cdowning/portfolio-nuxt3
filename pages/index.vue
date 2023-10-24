@@ -136,6 +136,7 @@
                 <Button
                     class="mb-10"
                     :use-nuxt-link="true"
+                    target="_blank"
                     to="https://storybook.caitlinhawley.com/"
                 >
                     View Design System

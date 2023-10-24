@@ -15,7 +15,8 @@ $cream-light: rgba($color-cream-30, 0.6);
 :root {
     --bg-primary: #{$color-cream-00};
     --bg-secondary: #eee9e3; // #eae5dd;
-    --header-primary: #{$color-green-20};
+    --header-primary: #{$color-teal-30};
+    // --header-primary: #{$color-green-20};
     --header-secondary: #{$color-blush-50};
     --text-primary: #{$color-cream-70};
     --text-secondary: #121629;
@@ -49,14 +50,15 @@ $cream-light: rgba($color-cream-30, 0.6);
     --input-bg: #{$color-white};
     --input-text: #{$color-gray-50};
     --input-border: #{$color-cream-60};
-    --input-border-focus: #{$color-green-20};
+    --input-border-focus: #{$color-blue-40};
     --input-bg-disabled: rgba(173, 166, 158, 0.2);
     --input-placeholder: #{$color-gray-20};
 }
 
 .dark-mode {
     --bg-primary: #{$color-gray-60};
-    --bg-secondary: #56534f; // #{$color-cream-70}
+    --bg-secondary: #56534f;
+    // --bg-secondary: #56534f; // #{$color-cream-70}
     --header-primary: #{$color-green-10};
     --header-secondary: #{$color-blush-40};
     --text-primary: #{$color-cream-10};
@@ -92,6 +94,7 @@ $cream-light: rgba($color-cream-30, 0.6);
     --input-text: #{$color-cream-00};
     --input-border: #{$color-cream-10};
     --input-border-focus: #{$color-blue-20};
-    --input-bg-disabled: rgbargba(148, 142, 136, 0.7);
+    // --input-bg-disabled: #{$color-gray-50};
+    --input-bg-disabled: rgba(148, 142, 136, 0.4);
     --input-placeholder: #{$color-gray-20};
 }

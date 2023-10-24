@@ -10,7 +10,7 @@ export default defineComponent({
             type: String,
             default: '',
         },
-        isRequired: {
+        isOptional: {
             type: Boolean,
             default: false,
         },

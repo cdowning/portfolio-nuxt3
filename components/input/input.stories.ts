@@ -31,6 +31,10 @@ const meta: Meta<typeof Input> = {
         isDisabled: {
             control: { type: 'boolean' },
         },
+        iconPosition: {
+            options: ['right', 'left'],
+            control: { type: 'select' },
+        },
         default: {
             control: 'text',
             description: 'Slot content',
@@ -64,16 +68,15 @@ export const Primary: Story = {
         setup() {
             return { args };
         },
-        template: `<Input v-bind="args">
-            {{ args.default }}
-        </Input>`,
+        template: `<Input v-bind="args" />`,
     }),
     args: {
         modelValue: '',
         size: 'md',
         type: 'text',
-        placeholder: 'Enter text',
+        placeholder: 'Placeholder',
         isDisabled: false,
+        id: '',
     },
 };
 export const Secondary: Story = {
@@ -83,13 +86,32 @@ export const Secondary: Story = {
         setup() {
             return { args };
         },
-        template: `<Input v-bind="args">
-            <Icon icon="search" class="pl-1" />
-        </Input>`,
+        template: `<Input v-bind="args" />`,
     }),
     args: {
         ...Primary.args,
+        icon: 'search',
         iconPosition: 'right',
-        isDisabled: true,
+        isDisabled: false,
+    },
+};
+
+export const Password: Story = {
+    name: 'Password Show/Hide',
+    render: (args: Args) => ({
+        components: { Input, Icon },
+        setup() {
+            const inputType = ref('password');
+
+            return { inputType, args };
+        },
+        template: `<Input v-bind="args" :type="inputType" @update-type="inputType = $event" />`,
+    }),
+    args: {
+        ...Primary.args,
+        type: 'password',
+        icon: 'eye',
+        iconPosition: 'right',
+        isDisabled: false,
     },
 };

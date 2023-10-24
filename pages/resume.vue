@@ -16,11 +16,6 @@
                 >
                     “Frontend developer with a passion for user experience.”
                 </h3>
-                <Tabs ref="tabs" :is-full-width="false" :is-horizontal="false">
-                    <Tab>Item one </Tab>
-                    <Tab :selected="true">Item two!!!!</Tab>
-                    <Tab>Item three</Tab>
-                </Tabs>
 
                 <!-- Main details in resume -->
                 <div class="flex flex-col flex-col-reverse md:flex-row">
@@ -30,7 +25,7 @@
                         <section class="flex flex-col relative mb-6 timeline">
                             <!-- Experience Header -->
 
-                            <h3
+                            <h4
                                 class="mb-4 flex flex-col items-center bg-cream-0 z-10 md:flex-row"
                             >
                                 <Icon
@@ -39,13 +34,15 @@
                                     size="lg"
                                 />
                                 <span class="text-lg">EXPERIENCE</span>
-                            </h3>
+                            </h4>
                             <!-- Quore -->
                             <div class="event relative">
                                 <div class="details text-center box md:ml-12">
-                                    <h4 class="dot">Quore</h4>
+                                    <h4 class="text-subtle">Quore</h4>
                                     <h3 class="text-md">Frontend Developer</h3>
-                                    <h4 class="mb-5">October 2016 - Present</h4>
+                                    <h4 class="mb-5 text-subtle">
+                                        October 2016 - Present
+                                    </h4>
                                     <ul class="text-left list-disc pl-4">
                                         <li>
                                             Create and manage our global Vue.js
@@ -56,8 +53,9 @@
                                             <a
                                                 href="https://nuxt.com/"
                                                 target="_blank"
-                                                >Nuxt.js</a
                                             >
+                                                Nuxt.js
+                                            </a>
                                             as the framework
                                         </li>
                                         <li>
@@ -66,7 +64,8 @@
                                             product (<a
                                                 href="app.quore.com"
                                                 target="_blank"
-                                                >app.quore.com</a
+                                            >
+                                                app.quore.com</a
                                             >)
                                         </li>
                                         <li>
@@ -79,11 +78,11 @@
                             <!-- NIC -->
                             <div class="event relative">
                                 <div class="details text-center box md:ml-12">
-                                    <h4 class="dot">NIC, Inc</h4>
+                                    <h4 class="text-subtle">NIC, Inc</h4>
                                     <h3 class="text-md">
                                         Senior User Interface Designer
                                     </h3>
-                                    <h4 class="mb-5">
+                                    <h4 class="mb-5 text-subtle">
                                         May 2016 - October 2016
                                     </h4>
 
@@ -106,7 +105,9 @@
                                     <h3 class="text-md">
                                         User Interface Designer
                                     </h3>
-                                    <h4 class="mb-5">May 2011 - May 2016</h4>
+                                    <h4 class="mb-5 text-subtle">
+                                        May 2011 - May 2016
+                                    </h4>
 
                                     <ul class="text-left list-disc pl-4">
                                         <li>
@@ -143,9 +144,11 @@
                             <!-- ARS Interactive -->
                             <div class="event relative">
                                 <div class="details text-center box md:ml-12">
-                                    <h4 class="dot">ARS Interactive</h4>
+                                    <h4 class="text-subtle">ARS Interactive</h4>
                                     <h3 class="text-md">Frontend Developer</h3>
-                                    <h4 class="mb-5">March 2010 - May 2011</h4>
+                                    <h4 class="mb-5 text-subtle">
+                                        March 2010 - May 2011
+                                    </h4>
                                     <ul class="text-left list-disc pl-4">
                                         <li>
                                             Responsible for loading all
@@ -170,7 +173,7 @@
                         <!-- Education section -->
                         <section class="flex flex-col relative mb-6 timeline">
                             <!-- Experience Header -->
-                            <h3
+                            <h4
                                 class="mb-4 flex flex-col items-center bg-cream-0 z-10 md:flex-row"
                             >
                                 <Icon
@@ -179,19 +182,19 @@
                                     size="lg"
                                 />
                                 <span class="text-lg">EDUCATION</span>
-                            </h3>
+                            </h4>
 
                             <!-- Art Institute -->
                             <div class="event relative">
                                 <div class="details text-center box md:ml-12">
-                                    <h4 class="dot">
+                                    <h4 class="text-subtle">
                                         The Art Institute of Tennessee -
                                         Nashville
                                     </h4>
                                     <h3 class="text-md">
                                         BFA, Interactive Media & Web Design
                                     </h3>
-                                    <h4 class="mb-0">2007-2009</h4>
+                                    <h4 class="mb-0 text-subtle">2007-2009</h4>
                                 </div>
                             </div>
                         </section>
@@ -200,7 +203,7 @@
                     <div class="w-full md:max-w-[35%] md:ml-4">
                         <section class="flex flex-col relative mb-6">
                             <!-- SKILLS Header -->
-                            <h3
+                            <h4
                                 class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <!-- TODO: ADD GEAR ICON -->
@@ -210,7 +213,7 @@
                                     size="lg"
                                 />
                                 <span class="text-lg">SKILLS</span>
-                            </h3>
+                            </h4>
                             <Progress
                                 class="mb-2"
                                 label="JavaScript"
@@ -251,7 +254,7 @@
                         <!-- TOOLS -->
                         <section class="flex flex-col relative mb-6">
                             <!-- Experience Header -->
-                            <h3
+                            <h4
                                 class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <!-- TODO: ADD GEAR ICON -->
@@ -261,7 +264,7 @@
                                     size="lg"
                                 />
                                 <span class="text-lg">TOOLS</span>
-                            </h3>
+                            </h4>
 
                             <ul class="flex justify-center md:block">
                                 <li class="flex items-center mb-2">
@@ -317,18 +320,47 @@
                             </ul>
                         </section>
                         <!-- CONNECT -->
-                        <!-- <section class="flex flex-col relative mb-6">
-                            <h3
+                        <section class="flex flex-col relative mb-6">
+                            <h4
                                 class="mb-4 flex flex-col items-center md:flex-row"
                             >
                                 <Icon
                                     class="relative bg-cream-0 mx-2"
-                                    icon="envelope"
+                                    icon="airplane"
                                     size="lg"
                                 />
                                 <span class="text-lg">CONNECT</span>
-                            </h3>
-                        </section> -->
+                            </h4>
+                            <p class="pl-4">
+                                If you would like to get in touch with me, feel
+                                free to shoot me an
+                                <a href="mailto:caitlin.j.hawley@gmail.com">
+                                    email </a
+                                >.
+                            </p>
+                            <div class="flex justify-center md:block pl-4">
+                                <!-- <a
+                                    class="no-underline text-inherit"
+                                    href="mailto:caitlin.j.hawley@gmail.com"
+                                >
+                                    <Icon
+                                        class="relative bg-cream-0 mx-2"
+                                        icon="envelope"
+                                        size="lg"
+                                    />
+                                    caitlin.j.hawley@gmail.com
+                                </a> -->
+
+                                <Button
+                                    class="no-underline"
+                                    size="sm"
+                                    @click="downloadResume"
+                                >
+                                    Download Resume
+                                    <Icon icon="pdf" class="pl-1" />
+                                </Button>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
