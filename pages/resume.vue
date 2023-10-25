@@ -35,15 +35,17 @@
                                 />
                                 <span class="text-lg">EXPERIENCE</span>
                             </h4>
-                            <!-- Quore -->
-                            <div class="event relative">
-                                <div class="details text-center box md:ml-12">
-                                    <h4 class="text-subtle">Quore</h4>
-                                    <h3 class="text-md">Frontend Developer</h3>
-                                    <h4 class="mb-5 text-subtle">
-                                        October 2016 - Present
-                                    </h4>
-                                    <ul class="text-left list-disc pl-4">
+
+                            <timeline-event>
+                                <timeline-details>
+                                    <template v-slot:title>Quore</template>
+                                    <template v-slot:header
+                                        >Frontend Developer</template
+                                    >
+                                    <template v-slot:date
+                                        >October 2016 - Present</template
+                                    >
+                                    <ul class="text-left list-disc pl-4 mt-5">
                                         <li>
                                             Create and manage our global Vue.js
                                             components using Storybook
@@ -73,20 +75,19 @@
                                             current product
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                            <!-- NIC -->
-                            <div class="event relative">
-                                <div class="details text-center box md:ml-12">
-                                    <h4 class="text-subtle">NIC, Inc</h4>
-                                    <h3 class="text-md">
-                                        Senior User Interface Designer
-                                    </h3>
-                                    <h4 class="mb-5 text-subtle">
-                                        May 2016 - October 2016
-                                    </h4>
+                                </timeline-details>
+                            </timeline-event>
 
-                                    <ul class="text-left list-disc pl-4">
+                            <timeline-event>
+                                <timeline-details>
+                                    <template v-slot:title>NIC, Inc</template>
+                                    <template v-slot:header>
+                                        Senior User Interface Designer
+                                    </template>
+                                    <template v-slot:date>
+                                        May 2016 - October 2016
+                                    </template>
+                                    <ul class="text-left list-disc pl-4 mt-5">
                                         <li>
                                             Responsible for implementing and
                                             maintaining styles and scripts
@@ -101,15 +102,17 @@
                                             creating solutions
                                         </li>
                                     </ul>
-                                    <hr class="my-6 border-cream-40" />
-                                    <h3 class="text-md">
+                                </timeline-details>
+                                <hr class="my-6 border-cream-40" />
+                                <timeline-details>
+                                    <template v-slot:header>
                                         User Interface Designer
-                                    </h3>
-                                    <h4 class="mb-5 text-subtle">
+                                    </template>
+                                    <template v-slot:date>
                                         May 2011 - May 2016
-                                    </h4>
+                                    </template>
 
-                                    <ul class="text-left list-disc pl-4">
+                                    <ul class="text-left list-disc pl-4 mt-5">
                                         <li>
                                             Responsible for implementing and
                                             maximizing usability throughout the
@@ -139,17 +142,21 @@
                                             cross-browser compatibility
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                            <!-- ARS Interactive -->
-                            <div class="event relative">
-                                <div class="details text-center box md:ml-12">
-                                    <h4 class="text-subtle">ARS Interactive</h4>
-                                    <h3 class="text-md">Frontend Developer</h3>
-                                    <h4 class="mb-5 text-subtle">
+                                </timeline-details>
+                            </timeline-event>
+
+                            <timeline-event>
+                                <timeline-details>
+                                    <template v-slot:title>
+                                        ARS Interactive
+                                    </template>
+                                    <template v-slot:header>
+                                        Frontend Developer
+                                    </template>
+                                    <template v-slot:date>
                                         March 2010 - May 2011
-                                    </h4>
-                                    <ul class="text-left list-disc pl-4">
+                                    </template>
+                                    <ul class="text-left list-disc pl-4 mt-5">
                                         <li>
                                             Responsible for loading all
                                             homepages and category ads for The
@@ -166,8 +173,8 @@
                                             current web standards
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
+                                </timeline-details>
+                            </timeline-event>
                         </section>
 
                         <!-- Education section -->
@@ -184,19 +191,18 @@
                                 <span class="text-lg">EDUCATION</span>
                             </h4>
 
-                            <!-- Art Institute -->
-                            <div class="event relative">
-                                <div class="details text-center box md:ml-12">
-                                    <h4 class="text-subtle">
+                            <timeline-event>
+                                <timeline-details>
+                                    <template v-slot:title>
                                         The Art Institute of Tennessee -
                                         Nashville
-                                    </h4>
-                                    <h3 class="text-md">
+                                    </template>
+                                    <template v-slot:header>
                                         BFA, Interactive Media & Web Design
-                                    </h3>
-                                    <h4 class="mb-0 text-subtle">2007-2009</h4>
-                                </div>
-                            </div>
+                                    </template>
+                                    <template v-slot:date> 2007-2009 </template>
+                                </timeline-details>
+                            </timeline-event>
                         </section>
                     </div>
                     <!-- Right column -->
