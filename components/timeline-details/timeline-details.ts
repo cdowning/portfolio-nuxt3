@@ -1,6 +1,11 @@
 const TimelineDetails = defineComponent({
     name: 'TimelineDetails',
-    props: {},
+    props: {
+        borderColor: {
+            type: String,
+            default: '',
+        },
+    },
     setup(props) {},
 });
 

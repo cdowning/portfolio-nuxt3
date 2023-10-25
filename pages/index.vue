@@ -241,13 +241,13 @@
                     >
                         <Icon icon="vscode" size="xl" class="vscode" />
                     </a>
-                    <a
+                    <!-- <a
                         href="https://vuetifyjs.com/en/"
                         target="_blank"
                         title="Vuetify"
                     >
                         <Icon icon="vuetify" size="xl" class="vuetify" />
-                    </a>
+                    </a> -->
                     <a href="https://vuejs.org/" target="_blank" title="Vue">
                         <Icon icon="vue" size="xl" class="vue" />
                     </a>
@@ -270,12 +270,12 @@
 
                 <CardGroup :items="cards" orientation="portrait"></CardGroup>
 
-                <div class="block float-right">
+                <div class="block xl:float-right">
                     <Button
-                        type="link"
-                        location="https://codepen.io/cdowning"
-                        target="_blank"
                         class="right"
+                        :use-nuxt-link="true"
+                        target="_blank"
+                        to="https://codepen.io/cdowning"
                     >
                         View More
                     </Button>
