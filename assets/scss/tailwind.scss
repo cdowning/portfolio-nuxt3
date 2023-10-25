@@ -53,6 +53,8 @@ $cream-light: rgba($color-cream-30, 0.6);
     --input-border-focus: #{$color-blue-40};
     --input-bg-disabled: rgba(173, 166, 158, 0.2);
     --input-placeholder: #{$color-gray-20};
+    --radio-bg-checked: #{$color-blush-50};
+    --radio-inset: #{$color-cream-00};
 }
 
 .dark-mode {
@@ -97,4 +99,6 @@ $cream-light: rgba($color-cream-30, 0.6);
     // --input-bg-disabled: #{$color-gray-50};
     --input-bg-disabled: rgba(148, 142, 136, 0.4);
     --input-placeholder: #{$color-gray-20};
+    --radio-bg-checked: #{$color-teal-30};
+    --radio-inset: #{$color-cream-10};
 }

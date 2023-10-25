@@ -15,11 +15,11 @@ const preview: Preview = {
                 date: /Date$/,
             },
         },
-        docs: {
-            theme: themes.light,
-        },
+        // docs: {
+        //     theme: themes.light,
+        // },
         darkMode: {
-            current: 'light',
+            // current: 'light', // I think this was causing the weird color mode flash
             classTarget: 'html',
             darkClass: 'dark-mode',
             stylePreview: true,

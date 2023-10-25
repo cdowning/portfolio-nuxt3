@@ -20,11 +20,11 @@ export default defineComponent({
     setup(props, context) {
         const content = ref(props.data);
 
-        function onCloseDialog() {
+        const onCloseDialog = () => {
             if (props.isDismissible) {
                 context.emit('close');
             }
-        }
+        };
 
         return {
             onCloseDialog,

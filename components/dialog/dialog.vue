@@ -26,7 +26,7 @@
                 icon="close"
                 size="md"
                 class="close cursor-pointer"
-                @click.native="$emit('close')"
+                @click="$emit('close')"
             />
         </div>
     </transition>
