@@ -38,6 +38,7 @@
         "react-dom": "^18.2.0",
         "sass": "^1.68.0",
         "storybook": "7.4.4",
-        "storybook-dark-mode": "^3.0.1"
+        "storybook-dark-mode": "^3.0.1",
+        "vue-multiselect": "^3.0.0-beta.3"
     }
 }

@@ -5,6 +5,7 @@ import { themes } from '@storybook/theming';
 import '../assets/scss/fonts.scss'; // get fonts used in app
 import '../assets/scss/tailwind.scss'; // replace with the name of your tailwind css file
 import '../assets/scss/main.scss'; // body/html styles for dark and light mode
+import '../assets/scss/transitions.scss'; // transitions for vue transition
 
 const preview: Preview = {
     parameters: {
