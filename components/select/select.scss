@@ -1,0 +1,110 @@
+@import '~/assets/scss/variables';
+
+.select-container {
+    position: relative;
+
+    :deep(.multiselect) {
+        background-color: $color-gray-00;
+        color: $color-gray-50;
+
+        .icon-caret-down {
+            position: absolute;
+            right: 0.625rem;
+            top: 0.8rem;
+            z-index: 10;
+            transition: all 200ms ease-in-out;
+        }
+
+        // Open select
+        &.select-open {
+            .icon-caret-down {
+                transform: rotate(180deg);
+            }
+        }
+
+        // Container that shows selected values
+        .multiselect__tags {
+            border-color: $color-gray-20;
+            justify-content: center;
+            padding: 0.5rem 2rem 0.5rem 0.75rem;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.25rem;
+            min-height: 3rem;
+
+            .tag-container {
+                display: flex;
+                @apply gap-x-2;
+            }
+
+            .multiselect__single {
+                display: inherit;
+                padding: 0;
+                margin: 0;
+            }
+            input {
+                // padding-top: 1rem;
+                // display: none;
+            }
+
+            .multiselect__placeholder {
+                margin-bottom: 0;
+            }
+        }
+
+        // Circle back
+        .multiselect__input {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        // Option list
+        .multiselect__content-wrapper {
+            border-color: $color-gray-20;
+            border-radius: 0.25rem;
+
+            .multiselect__content {
+                max-width: 100%;
+            }
+
+            .multiselect__option {
+                @apply flex items-center;
+                padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+
+                .option-label {
+                    min-width: 0;
+                    @apply truncate;
+                    line-height: 1.5;
+                }
+
+                .icon-check {
+                    display: none;
+                }
+
+                // Selected option
+                &.multiselect__option--selected {
+                    background-color: $color-white;
+                    font-weight: 400;
+
+                    .icon-check {
+                        display: block;
+                    }
+                }
+
+                // Hovered option
+                &.multiselect__option--highlight {
+                    background-color: $color-blush-10;
+                    color: $color-gray-50;
+                }
+            }
+        }
+
+        // .customSearch {
+        //     border: 1px solid red;
+
+        //     &:focus {
+        //         border: 1px solid green;
+        //     }
+        // }
+    }
+}

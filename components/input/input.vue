@@ -1,20 +1,19 @@
 <template>
-    <div ref="currentInput" :class="classes">
+    <div :class="classes">
         <input
+            ref="currentInput"
+            :value="modelValue"
             :type="type"
             :id="id"
             :name="id"
             :class="inputClasses"
             :disabled="isDisabled"
             :placeholder="placeholder"
+            @input="onUpdateValue($event)"
             @focusin="focused = !focused"
             @focusout="focused = !focused"
         />
-        <slot
-            :icon="icon"
-            :onClick="onIconClick"
-            icon-class="cursor-pointer"
-        ></slot>
+        <slot v-bind="{ icon, onIconClick }" icon-class="cursor-pointer"></slot>
     </div>
 </template>
 

@@ -19,7 +19,7 @@ const typeOptions = [
     'date',
 ];
 
-const meta: Meta<typeof Input> = {
+const meta: Meta<any> = {
     title: 'Components/Input',
     component: Input,
     argTypes: {
@@ -53,7 +53,7 @@ const meta: Meta<typeof Input> = {
         },
     },
     tags: ['autodocs'],
-} satisfies Meta<typeof Input>;
+} satisfies Meta<any>;
 
 export default meta;
 
@@ -75,7 +75,8 @@ export const Primary: Story = {
         setup() {
             return { args };
         },
-        template: `<Input v-bind="args" />`,
+        template: `<Input v-model="args.modelValue" v-bind="args" />
+        `,
     }),
     args: {
         modelValue: '',
@@ -93,7 +94,7 @@ export const Secondary: Story = {
         setup() {
             return { args };
         },
-        template: `<Input v-bind="args">
+        template: `<Input v-model="args.modelValue" v-bind="args">
            <Icon :icon="args.icon" />
         </Input>`,
     }),
@@ -114,17 +115,19 @@ export const Password: Story = {
 
             return { inputType, args };
         },
-        template: `<Input v-bind="args" :type="inputType" @update-type="inputType = $event">
-            <template v-slot="{ icon, onClick, iconClass }">
+        template: `<Input v-model="args.modelValue" v-bind="args" :type="inputType" @update-type="inputType = $event">
+            <template v-slot="{ icon, onIconClick, iconClass }">
                 <Icon
                     :icon="icon"
-                    @click="onClick"
                     :class="iconClass"
+                    @click="onIconClick"
+                    size="md"
                 />
             </template>
         </Input>`,
     }),
     args: {
+        modelValue: '',
         placeholder: 'Enter password',
         icon: 'eye',
         iconPosition: 'right',

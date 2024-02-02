@@ -2,6 +2,7 @@ import type { Preview } from '@storybook/vue3';
 
 import { themes } from '@storybook/theming';
 
+import '../assets/scss/variables.scss'; // get variables
 import '../assets/scss/fonts.scss'; // get fonts used in app
 import '../assets/scss/tailwind.scss'; // replace with the name of your tailwind css file
 import '../assets/scss/main.scss'; // body/html styles for dark and light mode

@@ -12,6 +12,7 @@ const Input = defineComponent({
     props: {
         modelValue: {
             type: String,
+            default: '',
         },
         size: {
             type: String,
@@ -44,8 +45,8 @@ const Input = defineComponent({
             default: 'right',
         },
     },
-    emits: ['update-type', 'click-icon'],
-    setup(props, context) {
+    emits: ['update-type', 'click-icon', 'update:model-value'],
+    setup(props, { emit, slots }) {
         // Refs
         const currentInput = ref<any>(null);
         const focused = ref(false);
@@ -55,7 +56,7 @@ const Input = defineComponent({
         // global classes
         const classes = computed<object[] | string[] | {}>(() => {
             return [
-                'input flex items-center mb-6 px-2',
+                'input flex items-center px-2',
                 'input-' + props.size,
                 { 'input-focused': !!focused.value },
                 {
@@ -72,7 +73,7 @@ const Input = defineComponent({
 
         // Slot computed properties
         const hasIcon = computed<boolean>(() => {
-            return !!context.slots.default;
+            return !!slots.default;
         });
 
         // Methods
@@ -97,7 +98,11 @@ const Input = defineComponent({
             icon.value =
                 type === 'text' ? PasswordIcon.Hide : PasswordIcon.Show;
 
-            context.emit('update-type', type);
+            emit('update-type', type);
+        };
+
+        const onUpdateValue = (event: any) => {
+            emit('update:model-value', event.target.value);
         };
 
         return {
@@ -114,6 +119,7 @@ const Input = defineComponent({
             // Methods
             onIconClick,
             togglePasswordVisibility,
+            onUpdateValue,
         };
     },
 });

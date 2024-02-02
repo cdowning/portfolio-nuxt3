@@ -3,6 +3,7 @@
         v-if="icon"
         :class="[
             'icon',
+            'icon-' + icon,
             { [`text-${color}`]: color },
             { [`icon-${size}`]: size },
         ]"
@@ -12,7 +13,7 @@
         <svg :class="['svg-icon']" :width="width" :height="height">
             <use
                 v-bind="{
-                    'xlink:href': iconPath,
+                    href: iconPath,
                 }"
             />
         </svg>
