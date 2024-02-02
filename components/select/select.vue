@@ -64,7 +64,7 @@
                                 icon="close"
                                 color="white"
                                 type="line"
-                                size="xxs"
+                                size="xs"
                                 @click="removeElement(index)"
                             />
                         </div>

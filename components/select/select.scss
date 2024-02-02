@@ -34,7 +34,8 @@
 
             .tag-container {
                 display: flex;
-                @apply gap-x-2;
+                flex-wrap: wrap;
+                @apply gap-x-2 gap-y-2;
             }
 
             .multiselect__single {
@@ -70,6 +71,7 @@
             .multiselect__option {
                 @apply flex items-center;
                 padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+                height: 2.5rem;
 
                 .option-label {
                     min-width: 0;
