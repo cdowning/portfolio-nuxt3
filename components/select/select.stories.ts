@@ -67,14 +67,6 @@ const meta: Meta<typeof Select> = {
             control: { type: 'object' },
         },
     },
-    parameters: {
-        docs: {
-            story: {
-                inline: false,
-                iframeHeight: 376,
-            },
-        },
-    },
     tags: ['autodocs'],
 } satisfies Meta<typeof Select>;
 
@@ -91,12 +83,14 @@ export const Primary = {
                 args,
             };
         },
-        template: `<Select v-bind="args" />`,
+        template: `<div class="h-[25rem]">
+        <Select v-bind="args" />
+        </div>`,
     }),
     args: {
         modelValue: [options[0]],
         options: options,
-        placeholder: 'Enter First Name',
+        placeholder: 'Enter Language',
         disabled: false,
         multiple: false,
         searchable: false,
@@ -107,6 +101,17 @@ export const Primary = {
 
 // Multiple Select with search
 export const MultipleSelect: Story = {
+    render: (args: Args) => ({
+        components: { Select },
+        setup() {
+            return {
+                args,
+            };
+        },
+        template: `<div class="h-[25rem]">
+        <Select v-bind="args" />
+        </div>`,
+    }),
     args: {
         ...Primary.args,
         multiple: true,
@@ -115,6 +120,17 @@ export const MultipleSelect: Story = {
 } satisfies Story;
 
 export const WithIcons: Story = {
+    render: (args: Args) => ({
+        components: { Select },
+        setup() {
+            return {
+                args,
+            };
+        },
+        template: `<div class="h-[25rem]">
+            <Select v-bind="args" />
+        </div>`,
+    }),
     args: {
         ...Primary.args,
         modelValue: [iconOptions[0]],
@@ -123,105 +139,3 @@ export const WithIcons: Story = {
         searchable: true,
     },
 } satisfies Story;
-
-// export const DisabledOption: Story = {
-//     name: 'With Disabled Option',
-//     args: {
-//         ...Primary.args,
-//         options: disabledOption,
-//         multiple: true,
-//     },
-// } satisfies Story;
-
-// Multiple Select - Tags
-// export const MultiSelect: Story = {
-//     name: 'With Tag Styling',
-//     args: {
-//         ...Primary.args,
-//         multiple: true,
-//         limitShown: 2,
-//         showTags: true,
-//     },
-// } satisfies Story;
-
-// Checkboxes
-// export const CheckboxSelect: Story = {
-//     name: 'With Checkboxes',
-//     args: {
-//         ...Primary.args,
-//         multiple: true,
-//     },
-// } satisfies Story;
-
-// // Select All
-// export const AllSelect: Story = {
-//     name: 'With Select All',
-//     args: {
-//         ...Primary.args,
-//         options: allOption,
-//         multiple: true,
-//     },
-// } satisfies Story;
-
-// // Add Tags Select - Example: if you want to add a value to the list of options
-// export const TagSelect = {
-//     name: 'Taggable',
-//     render: (args: Args) => ({
-//         components: { QSelect },
-//         setup() {
-//             const validateEmail = (email) => {
-//                 const mailformat =
-//                     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//                 return email.match(mailformat);
-//             };
-
-//             const checkEmail = (tag) => {
-//                 const isEmailValid = validateEmail(tag.label);
-
-//                 // Add unhappy path later in else statement.
-//                 if (isEmailValid) {
-//                     const emailAddress = {
-//                         label: tag.label,
-//                         added: tag.added, // new value attribute for styling the tag differently
-//                     };
-
-//                     // Push it to the list of options
-//                     args.options.push(emailAddress);
-
-//                     // Push to the v-model (selected values)
-//                     args.modelValue.push(emailAddress);
-//                 } else {
-//                     // This would be a toast
-//                     console.log('email is invalid');
-//                 }
-
-//                 return isEmailValid;
-//             };
-
-//             return {
-//                 // page methods
-//                 validateEmail,
-//                 checkEmail,
-
-//                 // component
-//                 args,
-//             };
-//         },
-//         template: `<q-select v-bind="args" :validation-method="checkEmail" />`,
-//     }),
-//     args: {
-//         modelValue: [emailOptions[0], emailOptions[1]],
-//         options: emailOptions,
-//         placeholder: 'Enter First Name',
-//         disabled: false,
-//         trackBy: 'id',
-//         label: 'label',
-//         hasCheckboxes: true,
-//         multiple: true,
-//         taggable: true,
-//         searchable: true,
-//         limitShown: 2,
-//         showSelectedCount: true,
-//         tagPlaceholder: 'Please press enter to add a new email',
-//     },
-// } satisfies Story;
